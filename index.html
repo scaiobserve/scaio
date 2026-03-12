@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCAIO | South Carolina Artificial Intelligence Observatory</title>
+  <meta name="description" content="SCAIO is a research and information hub dedicated to studying and explaining the impact of artificial intelligence on South Carolina's economy, workforce, public institutions, and businesses." />
+  <style>
+    :root {
+      --brand-blue: #003c97;
+      --brand-blue-dark: #022d6e;
+      --accent: #0e5ed7;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ee;
+      --panel: #ffffff;
+      --soft: #f8fbff;
+      --soft-2: #eef4ff;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #f5f8fc;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(203, 213, 225, 0.7);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 78px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      background: var(--brand-blue);
+      border-radius: 16px;
+      padding: 8px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      box-shadow: 0 8px 24px rgba(0, 60, 151, 0.2);
+    }
+
+    .brand-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+      background: var(--brand-blue);
+    }
+
+    .brand-copy { min-width: 0; }
+    .brand-copy strong {
+      display: block;
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+    .brand-copy span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #1e293b;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav a { color: #334155; }
+    .nav a:hover { color: var(--brand-blue); }
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(94, 152, 255, 0.18), transparent 26%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.12), transparent 22%),
+        linear-gradient(135deg, var(--brand-blue-dark), var(--brand-blue));
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 42px;
+      align-items: center;
+      padding: 72px 0 84px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      font-size: 0.77rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 5vw, 4.6rem);
+      line-height: 1.06;
+      margin: 18px 0 18px;
+      letter-spacing: -0.03em;
+      max-width: 760px;
+    }
+
+    .hero p.lead {
+      font-size: 1.12rem;
+      max-width: 690px;
+      color: rgba(255,255,255,0.9);
+      margin: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: #fff;
+      color: var(--brand-blue-dark);
+    }
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 22px 55px rgba(2, 45, 110, 0.36);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card h3 {
+      margin: 0 0 14px;
+      font-size: 0.92rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.84);
+    }
+
+    .hero-card p {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.98rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      background: rgba(0,0,0,0.14);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    section { padding: 78px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 6px 0 0;
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 700;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0;
+    }
+
+    .cards-4,
+    .cards-3,
+    .cards-2 {
+      display: grid;
+      gap: 22px;
+    }
+
+    .cards-4 { grid-template-columns: repeat(4, 1fr); }
+    .cards-3 { grid-template-columns: repeat(3, 1fr); }
+    .cards-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3, .card h4 {
+      margin: 0 0 10px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.97rem;
+    }
+
+    .soft-section {
+      background: linear-gradient(180deg, #ffffff, var(--soft));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .dark-section {
+      background: linear-gradient(135deg, #071a3d, #0d377f);
+      color: #fff;
+    }
+    .dark-section .kicker { color: #b9d4ff; }
+    .dark-section .section-intro { color: rgba(255,255,255,0.82); }
+    .dark-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 20px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .dark-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .priority-tag,
+    .role-tag,
+    .draft-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .priority-tag { background: var(--soft-2); color: var(--brand-blue); }
+    .role-tag { background: #eff6ff; color: #1d4ed8; }
+    .draft-tag { background: #f8fafc; color: #475569; }
+
+    .priority-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .mini-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px 18px;
+      color: #334155;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .team-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .site-map {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .site-map ul {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-map li {
+      padding: 8px 0;
+      border-top: 1px dashed var(--line);
+      color: var(--muted);
+    }
+
+    .site-map li:first-child { border-top: 0; }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .footer {
+      background: #081224;
+      color: rgba(255,255,255,0.88);
+      padding: 54px 0 60px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer h2 {
+      margin: 8px 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.15rem;
+      line-height: 1.12;
+    }
+
+    .footer-panel {
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+    }
+
+    .footer ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-inner,
+      .footer-grid,
+      .cards-4,
+      .cards-3,
+      .site-map,
+      .articles { grid-template-columns: 1fr 1fr; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .nav { display: none; }
+    }
+
+    @media (max-width: 760px) {
+      .header-inner { min-height: 72px; }
+      .brand-copy span { white-space: normal; }
+      .cards-4,
+      .cards-3,
+      .cards-2,
+      .team-grid,
+      .site-map,
+      .articles,
+      .footer-grid,
+      .dark-grid,
+      .list-grid,
+      .stats { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+      .section-head { display: block; }
+      .brand-badge { width: 52px; height: 52px; }
+      h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="SCAIO home">
+        <div class="brand-badge">
+          <img src="logo.png" alt="SCAIO logo" />
+        </div>
+        <div class="brand-copy">
+          <strong>SCAIO</strong>
+          <span>South Carolina Artificial Intelligence Observatory</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#policy">Policy Tracker</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#journal">Journal</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">A new public-interest research initiative for the Palmetto State</div>
+          <h1>Studying, tracking, and explaining the impact of AI on South Carolina.</h1>
+          <p class="lead">
+            The South Carolina Artificial Intelligence Observatory is being built as a central hub for research,
+            policy tracking, ecosystem mapping, and public education on artificial intelligence in South Carolina.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#research">Explore the research agenda</a>
+            <a class="btn btn-secondary" href="#structure">View site structure</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Launching vision</h3>
+          <p>
+            SCAIO aims to become South Carolina's authoritative clearinghouse for AI research, policy analysis,
+            ecosystem intelligence, and public-facing explainers.
+          </p>
+          <p>
+            Initial focus areas include manufacturing, workforce, local government, business adoption,
+            cybersecurity, education, and the broader institutional landscape of AI in South Carolina.
+          </p>
+          <div class="stats">
+            <div class="stat"><strong>Statewide</strong><span>Focus</span></div>
+            <div class="stat"><strong>Policy + Practice</strong><span>Approach</span></div>
+            <div class="stat"><strong>Research</strong><span>Output</span></div>
+            <div class="stat"><strong>Convening</strong><span>Role</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">About</div>
+            <h2>Why SCAIO exists</h2>
+          </div>
+          <p class="section-intro">
+            South Carolina has emerging AI activity across universities, startups, public institutions, workforce programs,
+            and private industry, but much of it remains fragmented, siloed, and difficult to track.
+          </p>
+        </div>
+
+        <div class="cards-2">
+          <article class="card">
+            <h3>The mission</h3>
+            <p>
+              SCAIO is intended to serve as a neutral observatory and public-facing research center focused on how
+              artificial intelligence is reshaping South Carolina's economy, workforce, public institutions, and business environment.
+            </p>
+          </article>
+          <article class="card">
+            <h3>The role</h3>
+            <p>
+              Part think tank, part policy tracker, part research library, and part statewide directory, SCAIO is being designed
+              to make the AI landscape legible for policymakers, journalists, educators, businesses, and citizens.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Core Functions</div>
+            <h2>What the observatory will do</h2>
+          </div>
+        </div>
+
+        <div class="cards-4">
+          <article class="card">
+            <h3>Research &amp; White Papers</h3>
+            <p>State-specific studies on AI's impact on South Carolina's economy, workforce, public institutions, and business environment.</p>
+          </article>
+          <article class="card">
+            <h3>Policy Tracking</h3>
+            <p>Monitoring state and federal AI developments that affect South Carolina residents, agencies, employers, and local governments.</p>
+          </article>
+          <article class="card">
+            <h3>Ecosystem Mapping</h3>
+            <p>A growing directory of AI-related companies, research labs, institutions, public initiatives, and community resources across the state.</p>
+          </article>
+          <article class="card">
+            <h3>Public Education</h3>
+            <p>Clear explainers and accessible analysis to help policymakers, journalists, businesses, and citizens understand what AI means for South Carolina.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Launch Priorities</div>
+            <h2>The first things to build</h2>
+          </div>
+          <p class="section-intro">
+            This landing page is intentionally structured to help visualize what belongs on the site now,
+            what can wait, and what will eventually become a deeper research and public-interest platform.
+          </p>
+        </div>
+
+        <div class="cards-2">
+          <article class="card">
+            <div class="priority-head">
+              <span class="priority-tag">Flagship Report</span>
+              <span class="small">Priority 1</span>
+            </div>
+            <h3>The Artificial Intelligence Landscape of South Carolina</h3>
+            <p>A foundational report mapping the state's AI ecosystem, major institutions, affected industries, workforce implications, and policy gaps.</p>
+          </article>
+          <article class="card">
+            <div class="priority-head">
+              <span class="priority-tag">Directory</span>
+              <span class="small">Priority 2</span>
+            </div>
+            <h3>South Carolina AI Ecosystem Map</h3>
+            <p>A public-facing directory of AI companies, university labs, public initiatives, investors, events, and educational programs.</p>
+          </article>
+          <article class="card">
+            <div class="priority-head">
+              <span class="priority-tag">Policy</span>
+              <span class="small">Priority 3</span>
+            </div>
+            <h3>South Carolina AI Policy Tracker</h3>
+            <p>A running tracker of state legislation, agency guidance, procurement standards, and relevant federal developments.</p>
+          </article>
+          <article class="card">
+            <div class="priority-head">
+              <span class="priority-tag">Commentary</span>
+              <span class="small">Priority 4</span>
+            </div>
+            <h3>SCAIO Journal</h3>
+            <p>A blog featuring explainers, essays, interviews, and commentary on AI's implications for South Carolina.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Research Agenda</div>
+            <h2>Initial subject areas</h2>
+          </div>
+          <p class="section-intro">
+            SCAIO's early research can be strongest where AI intersects with South Carolina's real economy,
+            public institutions, and cybersecurity environment.
+          </p>
+        </div>
+        <div class="dark-grid">
+          <div class="dark-box">AI and South Carolina manufacturing</div>
+          <div class="dark-box">AI readiness by county and region</div>
+          <div class="dark-box">AI adoption among small businesses</div>
+          <div class="dark-box">Cybersecurity and AI risk for public institutions</div>
+          <div class="dark-box">AI, workforce disruption, and retraining needs</div>
+          <div class="dark-box">State and local government uses of AI</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Founding Team</div>
+            <h2>Early leadership and credibility</h2>
+          </div>
+          <p class="section-intro">
+            This placeholder section uses the information available so far and can later expand into full bio pages,
+            advisory board profiles, research fellows, and contributors.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <article class="card team-card">
+            <span class="role-tag">Founder &amp; Executive Director</span>
+            <h3>Jimmy</h3>
+            <p>
+              Background spanning policy journalism, civic and community research, development consulting, and hands-on AI implementation.
+              Experience includes early work at Ballotpedia, research roles tied to South Carolina policy and resiliency, leadership of Civitas,
+              and current AI automation work through Carolina Redesign.
+            </p>
+          </article>
+          <article class="card team-card">
+            <span class="role-tag">Chief Technologist</span>
+            <h3>Noah Schiffman</h3>
+            <p>
+              Veteran cybersecurity leader with more than two decades of experience in information security, technical research,
+              risk management, and emerging technology. Background includes senior security leadership roles, strategic advisory work,
+              conference speaking, technical writing, and patented invention across multiple disciplines.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" class="soft-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Site Architecture</div>
+            <h2>The full structure SCAIO can grow into</h2>
+          </div>
+          <p class="section-intro">
+            Some sections can launch immediately with concise placeholder copy, while others can be built out over time as reports,
+            directories, and contributors accumulate.
+          </p>
+        </div>
+
+        <div class="site-map">
+          <article class="card">
+            <h3>About SCAIO</h3>
+            <ul>
+              <li>Mission</li>
+              <li>Why South Carolina needs an AI observatory</li>
+              <li>Methodology &amp; editorial principles</li>
+              <li>Founding story</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Research</h3>
+            <ul>
+              <li>Flagship reports</li>
+              <li>White papers</li>
+              <li>Issue briefs</li>
+              <li>Data snapshots</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Policy Tracker</h3>
+            <ul>
+              <li>South Carolina legislation</li>
+              <li>Agency strategy &amp; procurement</li>
+              <li>Federal developments affecting SC</li>
+              <li>Timeline of AI policy milestones</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Ecosystem</h3>
+            <ul>
+              <li>Companies</li>
+              <li>Universities &amp; labs</li>
+              <li>Government programs</li>
+              <li>Events &amp; community</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Journal</h3>
+            <ul>
+              <li>Explainers</li>
+              <li>Commentary</li>
+              <li>Interviews</li>
+              <li>Sector analysis</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Team &amp; Fellows</h3>
+            <ul>
+              <li>Founding team</li>
+              <li>Advisory board (future)</li>
+              <li>Contributors</li>
+              <li>Guest authors</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="policy">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Future Section Preview</div>
+            <h2>Policy tracker mockup</h2>
+          </div>
+          <p class="section-intro">
+            This section is shown here as a preview of how SCAIO could quickly become useful:
+            current policy developments, a timeline of notable actions, and short explainers translating them for South Carolina audiences.
+          </p>
+        </div>
+
+        <div class="list-grid">
+          <div class="mini-box">South Carolina agency AI guidance</div>
+          <div class="mini-box">Relevant legislation and committee activity</div>
+          <div class="mini-box">Federal AI actions affecting state institutions</div>
+          <div class="mini-box">Procurement, education, labor, and privacy developments</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="soft-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Future Section Preview</div>
+            <h2>South Carolina AI ecosystem</h2>
+          </div>
+          <p class="section-intro">
+            Eventually this can become one of SCAIO's signature resources: a searchable state directory covering companies,
+            labs, university initiatives, public programs, investors, workforce resources, and events.
+          </p>
+        </div>
+
+        <div class="cards-4">
+          <article class="card"><h3>Companies &amp; startups</h3><p>Placeholder module for listings, filters, and profiles by sector and region.</p></article>
+          <article class="card"><h3>Universities &amp; research labs</h3><p>Profiles for institutes, labs, grant initiatives, and applied AI research programs.</p></article>
+          <article class="card"><h3>Government initiatives</h3><p>State and local programs, pilots, procurement guidance, and public-sector use cases.</p></article>
+          <article class="card"><h3>Events, meetups &amp; education</h3><p>A future home for conferences, community gatherings, training resources, and academic programs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="journal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Journal</div>
+            <h2>Possible early articles</h2>
+          </div>
+        </div>
+        <div class="articles">
+          <article class="card"><span class="draft-tag">Draft topic</span><h3>Why South Carolina needs an AI observatory</h3><p>Founding essay explaining the mission, need, and role of SCAIO in the state.</p></article>
+          <article class="card"><span class="draft-tag">Draft topic</span><h3>What AI means for South Carolina manufacturing</h3><p>An early sector analysis focused on one of the state's most important economic pillars.</p></article>
+          <article class="card"><span class="draft-tag">Draft topic</span><h3>AI, cybersecurity, and public risk in the Palmetto State</h3><p>A natural first technical-policy piece given SCAIO's blend of implementation and security expertise.</p></article>
+          <article class="card"><span class="draft-tag">Draft topic</span><h3>How state governments are approaching AI governance</h3><p>A practical explainer connecting national developments to South Carolina audiences.</p></article>
+          <article class="card"><span class="draft-tag">Draft topic</span><h3>The emerging AI ecosystem in South Carolina</h3><p>A landscape article that can later expand into a structured public directory.</p></article>
+          <article class="card"><span class="draft-tag">Draft topic</span><h3>A practical guide to AI adoption for South Carolina organizations</h3><p>A bridge between research and implementation for civic, public, and private institutions.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="kicker">Build Phase</div>
+        <h2>A serious early-stage home for SCAIO</h2>
+        <p>
+          This prototype is designed to help clarify the brand, content priorities, and long-term structure
+          of the South Carolina Artificial Intelligence Observatory.
+        </p>
+      </div>
+      <aside class="footer-panel">
+        <strong>Next build decisions</strong>
+        <ul>
+          <li>Finalize the mission statement and positioning language</li>
+          <li>Confirm founding team bios and titles</li>
+          <li>Decide launch scope: landing page only vs. 5–7 live sections</li>
+          <li>Draft the first flagship report and first 5 articles</li>
+          <li>Build the directory and policy tracker over time</li>
+        </ul>
+      </aside>
+    </div>
+  </footer>
+</body>
+</html>

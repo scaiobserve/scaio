@@ -4,16 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SCAIO — South Carolina Artificial Intelligence Observatory</title>
-  <meta
-    name="description"
-    content="SCAIO is a public-interest research initiative studying, tracking, and explaining the impact of artificial intelligence on South Carolina."
-  />
+  <meta name="description" content="SCAIO is a public-interest research initiative studying, tracking, and explaining the impact of artificial intelligence on South Carolina." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #f6f8fb;
@@ -34,13 +28,8 @@
       --logo-blue: #0b4ea2;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -50,28 +39,22 @@
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
     }
 
+    /* ── Header ── */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: linear-gradient(90deg, rgba(8, 26, 54, 0.97), rgba(10, 42, 84, 0.94));
+      background: linear-gradient(90deg, rgba(8,26,54,0.97), rgba(10,42,84,0.94));
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .header-inner {
@@ -82,12 +65,7 @@
       gap: 24px;
     }
 
-    .brand-lockup {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
+    .brand-lockup { display: flex; flex-direction: column; min-width: 0; }
     .brand-lockup .wordmark {
       font-family: "Libre Baskerville", serif;
       font-size: 2rem;
@@ -96,46 +74,28 @@
       color: #fff;
       margin-bottom: 6px;
     }
-
     .brand-lockup .submark {
-      color: rgba(220, 232, 252, 0.78);
+      color: rgba(220,232,252,0.78);
       font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      white-space: normal;
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+    .nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav a { color: rgba(255,255,255,0.88); font-size: 0.95rem; font-weight: 500; transition: color 0.18s ease; }
+    .nav a:hover { color: #fff; }
 
-    .nav a {
-      color: rgba(255, 255, 255, 0.88);
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.18s ease;
-    }
-
-    .nav a:hover {
-      color: #fff;
-    }
-
+    /* ── Hero ── */
     .hero {
       position: relative;
       overflow: hidden;
       color: #fff;
       background:
-        radial-gradient(circle at 78% 18%, rgba(43, 174, 255, 0.18), transparent 28%),
-        radial-gradient(circle at 10% 95%, rgba(64, 124, 255, 0.2), transparent 26%),
+        radial-gradient(circle at 78% 18%, rgba(43,174,255,0.18), transparent 28%),
+        radial-gradient(circle at 10% 95%, rgba(64,124,255,0.2), transparent 26%),
         linear-gradient(135deg, #071a36 0%, #0b2e5e 42%, #14597d 100%);
     }
-
-    .hero::before,
-    .hero::after {
+    .hero::before, .hero::after {
       content: "";
       position: absolute;
       border-radius: 999px;
@@ -143,22 +103,8 @@
       opacity: 0.18;
       pointer-events: none;
     }
-
-    .hero::before {
-      width: 320px;
-      height: 320px;
-      right: -80px;
-      top: 20px;
-      background: #1aa7ff;
-    }
-
-    .hero::after {
-      width: 280px;
-      height: 280px;
-      left: -90px;
-      bottom: -50px;
-      background: #2f7ae5;
-    }
+    .hero::before { width:320px; height:320px; right:-80px; top:20px; background:#1aa7ff; }
+    .hero::after  { width:280px; height:280px; left:-90px; bottom:-50px; background:#2f7ae5; }
 
     .hero-inner {
       position: relative;
@@ -173,14 +119,14 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
       border-radius: 999px;
       padding: 10px 18px;
       font-size: 0.75rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.92);
+      color: rgba(255,255,255,0.92);
       margin-bottom: 24px;
     }
 
@@ -197,16 +143,11 @@
       margin: 0;
       max-width: 710px;
       font-size: 1.1rem;
-      color: rgba(240, 246, 255, 0.84);
+      color: rgba(240,246,255,0.84);
       line-height: 1.8;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 34px;
-    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
 
     .btn {
       display: inline-flex;
@@ -217,32 +158,13 @@
       border-radius: 16px;
       font-weight: 600;
       font-size: 0.98rem;
-      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease,
-        border-color 0.18s ease;
+      transition: transform 0.18s ease, background 0.18s ease;
     }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: #fff; color: var(--navy-2); box-shadow: 0 10px 26px rgba(0,0,0,0.14); }
+    .btn-secondary { border: 1px solid rgba(255,255,255,0.28); color: #fff; background: rgba(255,255,255,0.06); }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: #fff;
-      color: var(--navy-2);
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      color: #fff;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
     .logo-stage {
       width: min(100%, 460px);
       aspect-ratio: 1 / 1;
@@ -254,11 +176,10 @@
         radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 34%),
         radial-gradient(circle at bottom left, rgba(255,255,255,0.06), transparent 30%),
         rgba(255,255,255,0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 30px 60px rgba(3, 11, 23, 0.28);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 30px 60px rgba(3,11,23,0.28);
       backdrop-filter: blur(8px);
     }
-
     .logo-stage img {
       width: 100%;
       height: auto;
@@ -267,14 +188,10 @@
       background: var(--logo-blue);
     }
 
-    .section {
-      padding: 80px 0;
-    }
+    /* ── Sections ── */
+    .section { padding: 80px 0; }
 
-    .section-header {
-      max-width: 800px;
-      margin-bottom: 30px;
-    }
+    .section-header { max-width: 800px; margin-bottom: 30px; }
 
     .section-kicker {
       font-size: 0.76rem;
@@ -301,23 +218,11 @@
       line-height: 1.9;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 40px;
-      align-items: start;
-    }
+    .two-col { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: start; }
+    .stack { display: grid; gap: 18px; }
 
-    .stack {
-      display: grid;
-      gap: 18px;
-    }
-
-    .card-grid {
-      display: grid;
-      gap: 22px;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    /* ── Cards ── */
+    .card-grid { display: grid; gap: 22px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .card {
       background: var(--surface);
@@ -327,36 +232,12 @@
       box-shadow: var(--shadow);
     }
 
-    .card h3 {
-      margin: 0 0 12px;
-      font-size: 1.1rem;
-      color: var(--navy);
-      font-family: "Inter", sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
+    .card h3 { margin: 0 0 12px; font-size: 1.1rem; color: var(--navy); font-weight: 700; letter-spacing: -0.01em; }
+    .card p  { margin: 0; color: var(--muted); font-size: 0.96rem; line-height: 1.8; }
 
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
-      line-height: 1.8;
-    }
+    .priority-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
 
-    .priority-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 34px;
-    }
-
-    .label-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
+    .label-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
 
     .pill {
       display: inline-flex;
@@ -372,51 +253,26 @@
       letter-spacing: 0.12em;
     }
 
-    .status {
-      font-size: 0.72rem;
-      color: #8a96a7;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-    }
+    .status { font-size: 0.72rem; color: #8a96a7; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; }
 
-    .dark-band {
-      background: linear-gradient(180deg, #081a36 0%, #0a2a54 100%);
-      color: #fff;
-    }
+    /* ── Dark band ── */
+    .dark-band { background: linear-gradient(180deg, #081a36 0%, #0a2a54 100%); color: #fff; }
+    .dark-band .section-title, .dark-band .section-copy { color: #fff; }
+    .dark-band .section-copy { color: rgba(255,255,255,0.78); }
 
-    .dark-band .section-title,
-    .dark-band .section-copy {
-      color: #fff;
-    }
-
-    .dark-band .section-copy {
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    .topic-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-
+    .topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
     .topic {
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
       border-radius: var(--radius);
       padding: 18px 20px;
-      color: rgba(255, 255, 255, 0.94);
+      color: rgba(255,255,255,0.94);
       font-size: 0.98rem;
       line-height: 1.7;
     }
 
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 34px;
-    }
+    /* ── Team ── */
+    .team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 34px; }
 
     .team-card {
       background: var(--surface);
@@ -426,53 +282,17 @@
       box-shadow: var(--shadow);
     }
 
-    .role {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--blue);
-      margin-bottom: 10px;
-    }
+    .role { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--blue); margin-bottom: 10px; }
+    .team-card h3 { margin: 0 0 14px; font-family: "Libre Baskerville", serif; font-size: 1.6rem; color: var(--navy); }
+    .team-card p  { margin: 0; color: var(--muted); font-size: 0.97rem; line-height: 1.9; }
 
-    .team-card h3 {
-      margin: 0 0 14px;
-      font-family: "Libre Baskerville", serif;
-      font-size: 1.6rem;
-      color: var(--navy);
-    }
+    /* ── Site structure ── */
+    .site-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
+    .site-card ul  { margin: 14px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.8; }
+    .site-card li + li { margin-top: 8px; }
 
-    .team-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.97rem;
-      line-height: 1.9;
-    }
-
-    .site-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 34px;
-    }
-
-    .site-card ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .site-card li + li {
-      margin-top: 8px;
-    }
-
-    .resource-grid {
-      display: grid;
-      gap: 22px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-top: 30px;
-    }
+    /* ── Policy: resource cards ── */
+    .resource-grid { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 30px; }
 
     .resource-card {
       display: block;
@@ -483,45 +303,163 @@
       box-shadow: var(--shadow);
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
+    .resource-card:hover { transform: translateY(-2px); border-color: #c6d7f0; background: #fff; }
 
-    .resource-card:hover {
-      transform: translateY(-2px);
-      border-color: #c6d7f0;
-      background: #fff;
+    .resource-type { font-size: 0.72rem; color: #8a96a7; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; }
+    .resource-card h3 { margin: 12px 0 10px; font-size: 1.18rem; font-weight: 700; letter-spacing: -0.01em; color: var(--navy); }
+    .resource-card p  { margin: 0; color: var(--muted); font-size: 0.96rem; line-height: 1.8; }
+    .resource-link    { display: inline-block; margin-top: 14px; color: var(--blue); font-weight: 600; font-size: 0.94rem; }
+
+    /* ── Legislation tracker ── */
+    .legislation-header {
+      margin-top: 52px;
+      margin-bottom: 8px;
     }
 
-    .resource-type {
-      font-size: 0.72rem;
-      color: #8a96a7;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-    }
-
-    .resource-card h3 {
-      margin: 12px 0 10px;
-      font-size: 1.18rem;
-      font-family: "Inter", sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.01em;
+    .legislation-header h3 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.5rem;
       color: var(--navy);
+      margin: 0 0 6px;
     }
 
-    .resource-card p {
+    .legislation-header p {
+      color: var(--muted);
+      font-size: 0.98rem;
       margin: 0;
+    }
+
+    #legislation-tracker {
+      display: grid;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .bill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px 30px;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+    .bill-card:hover { transform: translateY(-2px); border-color: #c6d7f0; }
+
+    .bill-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .bill-card-title {
+      margin: 0;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    .bill-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    .bill-number {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--blue);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border: 1px solid var(--border);
+    }
+
+    .bill-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .bill-status.active   { background: #e6f4ea; color: #1a6630; border: 1px solid #b3d9bc; }
+    .bill-status.passed   { background: #e8f0fe; color: #1a53c9; border: 1px solid #b3ccf5; }
+    .bill-status.pending  { background: #fef9e6; color: #8a6800; border: 1px solid #f0d980; }
+    .bill-status.dead     { background: #f9ecec; color: #a02020; border: 1px solid #f0b8b8; }
+    .bill-status.default  { background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); }
+
+    .bill-impact {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 28px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .bill-divider { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+
+    .bill-section-label {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--blue);
+      margin: 0 0 6px;
+    }
+
+    .bill-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .bill-card p:last-of-type { margin-bottom: 0; }
+
+    .bill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      color: var(--blue);
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+    .bill-link:hover { color: var(--blue-2); }
+
+    .bill-card-empty {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
       color: var(--muted);
       font-size: 0.96rem;
-      line-height: 1.8;
     }
 
-    .resource-link {
-      display: inline-block;
-      margin-top: 14px;
-      color: var(--blue);
-      font-weight: 600;
-      font-size: 0.94rem;
-    }
-
+    /* ── Ecosystem map ── */
     .map-layout {
       display: grid;
       gap: 28px;
@@ -529,8 +467,7 @@
       margin-top: 34px;
     }
 
-    .map-panel,
-    .side-panel {
+    .map-panel, .side-panel {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 32px;
@@ -538,22 +475,8 @@
       box-shadow: var(--shadow);
     }
 
-    .panel-kicker {
-      font-size: 0.72rem;
-      color: #8a96a7;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-    }
-
-    .panel-title {
-      margin: 8px 0 0;
-      font-size: 1.6rem;
-      font-family: "Inter", sans-serif;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
+    .panel-kicker { font-size: 0.72rem; color: #8a96a7; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; }
+    .panel-title  { margin: 8px 0 0; font-size: 1.6rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
 
     .badge {
       display: inline-flex;
@@ -569,121 +492,24 @@
       letter-spacing: 0.14em;
     }
 
-    .panel-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
+    .panel-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
 
+    /* D3 map frame */
     .map-frame {
       position: relative;
       margin: 18px auto 0;
-      max-width: 560px;
-      aspect-ratio: 1.12 / 1;
       overflow: hidden;
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at 85% 14%, rgba(70, 196, 255, 0.16), transparent 24%),
-        radial-gradient(circle at 15% 88%, rgba(47, 122, 229, 0.18), transparent 22%),
-        linear-gradient(135deg, #081a36 0%, #0a2a54 50%, #0f4d7a 100%);
-      padding: 20px;
+      border-radius: 20px;
+      background: #071832;
     }
 
-    .map-frame svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.95;
-    }
+    .region-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
 
-    .map-node {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      text-align: left;
-      background: transparent;
-      border: 0;
-      padding: 0;
-      cursor: default;
-    }
+    .region-box { border: 1px solid var(--border); background: #f8fbff; border-radius: 18px; padding: 16px; }
+    .region-box h4 { margin: 0; font-size: 0.98rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+    .region-box p  { margin: 8px 0 0; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
-    .map-node-dot {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      border: 2px solid #fff;
-      background: var(--blue-3);
-      box-shadow: 0 8px 18px rgba(4, 17, 39, 0.34);
-    }
-
-    .map-node-dot span {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #fff;
-    }
-
-    .map-node-label {
-      margin-top: 9px;
-      display: block;
-      width: 170px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(8, 26, 54, 0.78);
-      backdrop-filter: blur(8px);
-      color: #fff;
-      font-size: 0.74rem;
-      line-height: 1.55;
-      padding: 10px 12px;
-      box-shadow: 0 18px 30px rgba(2, 10, 24, 0.28);
-    }
-
-    .map-node-label strong {
-      display: block;
-      font-size: 0.82rem;
-      margin-bottom: 4px;
-    }
-
-    .region-grid {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-top: 22px;
-    }
-
-    .region-box {
-      border: 1px solid var(--border);
-      background: #f8fbff;
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .region-box h4 {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-    }
-
-    .region-box p {
-      margin: 8px 0 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .entry-list {
-      margin-top: 18px;
-      display: grid;
-      gap: 14px;
-    }
+    .entry-list { margin-top: 18px; display: grid; gap: 14px; }
 
     .entry-card {
       display: block;
@@ -693,18 +519,9 @@
       padding: 16px;
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
+    .entry-card:hover { transform: translateY(-1px); border-color: #c6d7f0; background: #fff; }
 
-    .entry-card:hover {
-      transform: translateY(-1px);
-      border-color: #c6d7f0;
-      background: #fff;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .chip {
       display: inline-flex;
@@ -720,79 +537,23 @@
       text-transform: uppercase;
       letter-spacing: 0.14em;
     }
+    .chip.slate { color: #687789; }
 
-    .chip.slate {
-      color: #687789;
-    }
+    .entry-card h4 { margin: 12px 0 8px; font-size: 1.02rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+    .entry-card p  { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.75; }
 
-    .entry-card h4 {
-      margin: 12px 0 8px;
-      font-size: 1.02rem;
-      font-family: "Inter", sans-serif;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-    }
+    .grow-grid { margin-top: 18px; display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .entry-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.75;
-    }
+    .grow-box { border: 1px solid var(--border); background: #f8fbff; border-radius: 18px; padding: 16px; }
+    .grow-box h4    { margin: 0; font-size: 0.98rem; font-weight: 700; color: var(--navy); }
+    .grow-box .count{ margin-top: 4px; color: #7d8b9a; font-size: 0.88rem; }
+    .grow-box ul    { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
 
-    .grow-grid {
-      margin-top: 18px;
-      display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    /* ── Journal ── */
+    .article-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 30px; }
+    .article-tag  { font-size: 0.72rem; color: #8a96a7; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; margin-bottom: 12px; }
 
-    .grow-box {
-      border: 1px solid var(--border);
-      background: #f8fbff;
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .grow-box h4 {
-      margin: 0;
-      font-family: "Inter", sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .grow-box .count {
-      margin-top: 4px;
-      color: #7d8b9a;
-      font-size: 0.88rem;
-    }
-
-    .grow-box ul {
-      margin: 12px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
-
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 30px;
-    }
-
-    .article-tag {
-      font-size: 0.72rem;
-      color: #8a96a7;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
+    /* ── Footer ── */
     .footer {
       background: linear-gradient(180deg, #081a36 0%, #0a2a54 100%);
       color: #fff;
@@ -800,113 +561,50 @@
       margin-top: 30px;
     }
 
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .footer h2 {
-      margin: 0 0 14px;
-      font-family: "Libre Baskerville", serif;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .footer p,
-    .footer li {
-      color: rgba(255, 255, 255, 0.82);
-      line-height: 1.8;
-    }
+    .footer-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: start; }
+    .footer h2 { margin: 0 0 14px; font-family: "Libre Baskerville", serif; font-size: 2rem; line-height: 1.2; }
+    .footer p, .footer li { color: rgba(255,255,255,0.82); line-height: 1.8; }
 
     .footer-box {
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
       border-radius: 24px;
       padding: 24px;
     }
+    .footer-box ul { margin: 14px 0 0; padding-left: 18px; }
 
-    .footer-box ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
-    }
-
+    /* ── Responsive ── */
     @media (max-width: 1100px) {
-      .hero-inner,
-      .two-col,
-      .map-layout,
-      .footer-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .card-grid,
-      .site-grid,
-      .article-grid,
-      .resource-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .hero-inner, .two-col, .map-layout, .footer-inner { grid-template-columns: 1fr; }
+      .card-grid, .site-grid, .article-grid, .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 760px) {
-      .container {
-        width: min(var(--max), calc(100% - 28px));
-      }
-
-      .header-inner {
-        align-items: flex-start;
-        padding: 16px 0;
-        flex-direction: column;
-      }
-
-      .nav {
-        gap: 12px 16px;
-      }
-
-      .hero-inner {
-        padding: 64px 0 70px;
-        gap: 32px;
-      }
-
-      .card-grid,
-      .priority-grid,
-      .topic-grid,
-      .team-grid,
-      .site-grid,
-      .article-grid,
-      .resource-grid,
-      .region-grid,
-      .grow-grid {
+      .container { width: min(var(--max), calc(100% - 28px)); }
+      .header-inner { align-items: flex-start; padding: 16px 0; flex-direction: column; }
+      .nav { gap: 12px 16px; }
+      .hero-inner { padding: 64px 0 70px; gap: 32px; }
+      .card-grid, .priority-grid, .topic-grid, .team-grid,
+      .site-grid, .article-grid, .resource-grid, .region-grid, .grow-grid {
         grid-template-columns: 1fr;
       }
-
-      .logo-stage {
-        width: min(100%, 340px);
-      }
-
-      .section {
-        padding: 62px 0;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.3rem, 11vw, 3.5rem);
-      }
-
-      .map-node-label {
-        width: 145px;
-        font-size: 0.7rem;
-      }
+      .logo-stage { width: min(100%, 340px); }
+      .section { padding: 62px 0; }
+      .hero h1 { font-size: clamp(2.3rem, 11vw, 3.5rem); }
     }
   </style>
 </head>
 <body>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand-lockup">
         <div class="wordmark">SCAIO</div>
         <div class="submark">South Carolina Artificial Intelligence Observatory</div>
       </div>
-
       <nav class="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -919,6 +617,9 @@
     </div>
   </header>
 
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
   <section class="hero">
     <div class="container hero-inner">
       <div>
@@ -927,16 +628,14 @@
         <p>
           The South Carolina Artificial Intelligence Observatory is being built as a central
           hub for research, policy tracking, ecosystem mapping, and public education on how
-          artificial intelligence is reshaping South Carolina’s economy, workforce, institutions,
+          artificial intelligence is reshaping South Carolina's economy, workforce, institutions,
           and communities.
         </p>
-
         <div class="hero-actions">
           <a class="btn btn-primary" href="#research">Explore the research agenda</a>
           <a class="btn btn-secondary" href="#structure">View site structure</a>
         </div>
       </div>
-
       <div class="hero-visual">
         <div class="logo-stage">
           <img src="logo.png" alt="SCAIO logo" />
@@ -945,13 +644,15 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════ -->
   <section id="about" class="section">
     <div class="container two-col">
       <div>
         <div class="section-kicker">About</div>
         <h2 class="section-title">Why SCAIO exists</h2>
       </div>
-
       <div class="stack">
         <p class="section-copy">
           South Carolina has emerging AI activity across universities, startups, public institutions,
@@ -969,6 +670,9 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       CORE FUNCTIONS
+  ══════════════════════════════════════════════ -->
   <section class="section" style="background:#ffffff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header">
@@ -979,43 +683,30 @@
           statewide tracking, and institution-building over time.
         </p>
       </div>
-
       <div class="card-grid">
         <article class="card">
-          <h3>Research & White Papers</h3>
-          <p>
-            State-specific studies on AI’s impact on South Carolina’s economy, workforce, public
-            institutions, and business environment.
-          </p>
+          <h3>Research &amp; White Papers</h3>
+          <p>State-specific studies on AI's impact on South Carolina's economy, workforce, public institutions, and business environment.</p>
         </article>
-
         <article class="card">
           <h3>Policy Tracking</h3>
-          <p>
-            Monitoring state and federal AI developments that affect South Carolina residents,
-            agencies, employers, and local governments.
-          </p>
+          <p>Monitoring state and federal AI developments that affect South Carolina residents, agencies, employers, and local governments.</p>
         </article>
-
         <article class="card">
           <h3>Ecosystem Mapping</h3>
-          <p>
-            A growing directory of AI-related companies, research labs, institutions, public
-            initiatives, and community resources across the state.
-          </p>
+          <p>A growing directory of AI-related companies, research labs, institutions, public initiatives, and community resources across the state.</p>
         </article>
-
         <article class="card">
           <h3>Public Education</h3>
-          <p>
-            Clear explainers, commentary, and accessible analysis to help policymakers, journalists,
-            businesses, and citizens understand what AI means for South Carolina.
-          </p>
+          <p>Clear explainers, commentary, and accessible analysis to help policymakers, journalists, businesses, and citizens understand what AI means for South Carolina.</p>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       RESEARCH / LAUNCH PRIORITIES
+  ══════════════════════════════════════════════ -->
   <section id="research" class="section">
     <div class="container">
       <div class="section-header">
@@ -1026,70 +717,44 @@
           what can wait, and what can eventually become a deeper research and public-interest platform.
         </p>
       </div>
-
       <div class="priority-grid">
         <article class="card">
-          <div class="label-row">
-            <span class="pill">Flagship Report</span>
-            <span class="status">Priority 1</span>
-          </div>
+          <div class="label-row"><span class="pill">Flagship Report</span><span class="status">Priority 1</span></div>
           <h3>The Artificial Intelligence Landscape of South Carolina</h3>
-          <p>
-            A foundational report mapping the state’s AI ecosystem, major institutions, affected
-            industries, workforce implications, and policy gaps.
-          </p>
+          <p>A foundational report mapping the state's AI ecosystem, major institutions, affected industries, workforce implications, and policy gaps.</p>
         </article>
-
         <article class="card">
-          <div class="label-row">
-            <span class="pill">Directory</span>
-            <span class="status">Priority 2</span>
-          </div>
+          <div class="label-row"><span class="pill">Directory</span><span class="status">Priority 2</span></div>
           <h3>South Carolina AI Ecosystem Map</h3>
-          <p>
-            A public-facing directory of AI companies, university labs, public initiatives,
-            investors, events, and educational programs.
-          </p>
+          <p>A public-facing directory of AI companies, university labs, public initiatives, investors, events, and educational programs.</p>
         </article>
-
         <article class="card">
-          <div class="label-row">
-            <span class="pill">Policy</span>
-            <span class="status">Priority 3</span>
-          </div>
+          <div class="label-row"><span class="pill">Policy</span><span class="status">Priority 3</span></div>
           <h3>South Carolina AI Policy Tracker</h3>
-          <p>
-            A running tracker of state legislation, agency guidance, procurement standards, and
-            relevant federal developments.
-          </p>
+          <p>A running tracker of state legislation, agency guidance, procurement standards, and relevant federal developments.</p>
         </article>
-
         <article class="card">
-          <div class="label-row">
-            <span class="pill">Commentary</span>
-            <span class="status">Priority 4</span>
-          </div>
+          <div class="label-row"><span class="pill">Commentary</span><span class="status">Priority 4</span></div>
           <h3>SCAIO Journal</h3>
-          <p>
-            A blog featuring explainers, essays, interviews, and commentary on AI’s implications
-            for South Carolina.
-          </p>
+          <p>A blog featuring explainers, essays, interviews, and commentary on AI's implications for South Carolina.</p>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       RESEARCH AGENDA (DARK)
+  ══════════════════════════════════════════════ -->
   <section class="section dark-band">
     <div class="container two-col" style="align-items:center;">
       <div>
         <div class="section-kicker" style="color:#b9d6ff;">Research Agenda</div>
         <h2 class="section-title">Initial subject areas</h2>
         <p class="section-copy">
-          SCAIO’s early research can be strongest where AI intersects with South Carolina’s real
+          SCAIO's early research can be strongest where AI intersects with South Carolina's real
           economy, public institutions, policy environment, and cybersecurity landscape.
         </p>
       </div>
-
       <div class="topic-grid">
         <div class="topic">AI and South Carolina manufacturing</div>
         <div class="topic">AI readiness by county and region</div>
@@ -1101,6 +766,9 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       TEAM
+  ══════════════════════════════════════════════ -->
   <section id="team" class="section">
     <div class="container">
       <div class="section-header">
@@ -1111,7 +779,6 @@
           applied AI, cybersecurity, and emerging technology.
         </p>
       </div>
-
       <div class="team-grid">
         <article class="team-card">
           <div class="role">Director</div>
@@ -1132,7 +799,6 @@
             understand, govern, and benefit from the rise of artificial intelligence.
           </p>
         </article>
-
         <article class="team-card">
           <div class="role">Chief Technologist</div>
           <h3>Noah Schiffman</h3>
@@ -1154,6 +820,9 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       SITE ARCHITECTURE
+  ══════════════════════════════════════════════ -->
   <section id="structure" class="section" style="background:#ffffff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-header">
@@ -1164,7 +833,6 @@
           out over time as reports, directories, and contributors accumulate.
         </p>
       </div>
-
       <div class="site-grid">
         <article class="card site-card">
           <h3>About SCAIO</h3>
@@ -1175,7 +843,6 @@
             <li>Founding story</li>
           </ul>
         </article>
-
         <article class="card site-card">
           <h3>Research</h3>
           <ul>
@@ -1185,7 +852,6 @@
             <li>Data snapshots</li>
           </ul>
         </article>
-
         <article class="card site-card">
           <h3>Policy Tracker</h3>
           <ul>
@@ -1195,7 +861,6 @@
             <li>Timeline of AI policy milestones</li>
           </ul>
         </article>
-
         <article class="card site-card">
           <h3>Ecosystem</h3>
           <ul>
@@ -1205,7 +870,6 @@
             <li>Events and community</li>
           </ul>
         </article>
-
         <article class="card site-card">
           <h3>Blog / Journal</h3>
           <ul>
@@ -1215,9 +879,8 @@
             <li>Sector analysis</li>
           </ul>
         </article>
-
         <article class="card site-card">
-          <h3>Team & Fellows</h3>
+          <h3>Team &amp; Fellows</h3>
           <ul>
             <li>Founding team</li>
             <li>Advisory board</li>
@@ -1229,17 +892,22 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       POLICY TRACKER
+  ══════════════════════════════════════════════ -->
   <section id="policy" class="section">
     <div class="container">
       <div class="section-header">
         <div class="section-kicker">Policy Tracker</div>
         <h2 class="section-title">Relevant policy and governance links</h2>
         <p class="section-copy">
-          Early on, this section can mix original commentary with direct links to the state's most
-          relevant strategy documents, committee pages, and AI-related bills.
+          Early on, this section mixes original commentary with direct links to the state's most
+          relevant strategy documents, committee pages, and AI-related bills. The legislation tracker
+          below pulls live bill data as it is added to the database.
         </p>
       </div>
 
+      <!-- Static resource cards -->
       <div class="resource-grid">
         <a class="resource-card" href="https://admin.sc.gov/sites/admin/files/Documents/OED/Final%20SC%20AI%20Strategy.pdf" target="_blank" rel="noreferrer">
           <div class="resource-type">External resource</div>
@@ -1247,349 +915,255 @@
           <p>State guidance from the Department of Administration on how agencies should use and govern AI.</p>
           <span class="resource-link">Open resource →</span>
         </a>
-
         <a class="resource-card" href="https://www.scstatehouse.gov/CommitteeInfo/HouseRegulationsAndAdministrativeProceduresCommittee/" target="_blank" rel="noreferrer">
           <div class="resource-type">External resource</div>
-          <h3>SC House AI & Cybersecurity Committee</h3>
+          <h3>SC House AI &amp; Cybersecurity Committee</h3>
           <p>Committee page with notices, agendas, videos, and related legislative activity.</p>
           <span class="resource-link">Open resource →</span>
         </a>
-
         <a class="resource-card" href="https://www.scstatehouse.gov/sess126_2025-2026/bills/5253.htm" target="_blank" rel="noreferrer">
           <div class="resource-type">External resource</div>
           <h3>AI in Education Bill (H.5253)</h3>
           <p>A recent South Carolina bill focused on school use of AI and parental disclosure requirements.</p>
           <span class="resource-link">Open resource →</span>
         </a>
-
         <a class="resource-card" href="https://www.scstatehouse.gov/sess126_2025-2026/bills/443.htm" target="_blank" rel="noreferrer">
           <div class="resource-type">External resource</div>
-          <h3>Health Claims & AI Bill (H.443)</h3>
+          <h3>Health Claims &amp; AI Bill (H.443)</h3>
           <p>A South Carolina bill defining AI and automated decision-making tools in the health-insurance context.</p>
           <span class="resource-link">Open resource →</span>
         </a>
       </div>
+
+      <!-- ── Dynamic legislation tracker ── -->
+      <div class="legislation-header">
+        <h3>SC AI Legislation Tracker</h3>
+        <p>Detailed bill overviews, status, and business impact — loaded from the SCAIO bills database.</p>
+      </div>
+
+      <div id="legislation-tracker"></div>
+
+      <script>
+        fetch('./bills.json')
+          .then(response => response.json())
+          .then(bills => {
+            const container = document.getElementById('legislation-tracker');
+
+            if (!bills || bills.length === 0) {
+              container.innerHTML = '<div class="bill-card-empty">No legislation data available yet. Check back as bills are added to the database.</div>';
+              return;
+            }
+
+            bills.forEach(bill => {
+              // Determine status badge class
+              const statusLower = (bill.status || '').toLowerCase();
+              let statusClass = 'default';
+              if (statusLower.includes('active') || statusLower.includes('in committee') || statusLower.includes('introduced')) statusClass = 'active';
+              else if (statusLower.includes('passed') || statusLower.includes('signed')) statusClass = 'passed';
+              else if (statusLower.includes('pending')) statusClass = 'pending';
+              else if (statusLower.includes('dead') || statusLower.includes('failed') || statusLower.includes('vetoed')) statusClass = 'dead';
+
+              const card = document.createElement('div');
+              card.className = 'bill-card';
+
+              card.innerHTML = `
+                <div class="bill-card-header">
+                  <h3 class="bill-card-title">${bill.title || 'Untitled Bill'}</h3>
+                  <div class="bill-meta">
+                    <span class="bill-number">${bill.bill_number || ''}</span>
+                    <span class="bill-status ${statusClass}">${bill.status || 'Unknown'}</span>
+                    ${bill.impact_score != null ? `<span class="bill-impact">Impact&nbsp;${bill.impact_score}/10</span>` : ''}
+                  </div>
+                </div>
+                <hr class="bill-divider">
+                <div class="bill-section-label">Executive Summary</div>
+                <p>${bill.summary || 'No summary available.'}</p>
+                <div class="bill-section-label">Business Impact</div>
+                <p>${bill.explanation || 'No impact analysis available.'}</p>
+                ${bill.url ? `<a class="bill-link" href="${bill.url}" target="_blank" rel="noreferrer">Read full bill on LegiScan →</a>` : ''}
+              `;
+
+              container.appendChild(card);
+            });
+          })
+          .catch(() => {
+            const container = document.getElementById('legislation-tracker');
+            container.innerHTML = '<div class="bill-card-empty">Legislation data could not be loaded. Ensure <code>bills.json</code> is present in the same directory as this file.</div>';
+          });
+      </script>
+
     </div>
   </section>
 
- <section id="ecosystem" class="section" style="background:#edf4ff;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-kicker">Ecosystem</div>
-      <h2 class="section-title">Interactive South Carolina AI ecosystem map</h2>
-      <p class="section-copy">
-        This can become one of SCAIO’s signature public resources: a searchable, region-aware map
-        of the state’s AI institutions, university programs, reports, public initiatives, and
-        ecosystem organizations.
-      </p>
-    </div>
-
-    <div class="map-layout">
-      <div class="map-panel">
-        <div class="panel-head">
-          <div>
-            <div class="panel-kicker">Prototype</div>
-            <div class="panel-title">Regional map view</div>
-          </div>
-          <div class="badge">Improved outline</div>
-        </div>
-
-        <div class="map-frame">
-          <svg viewBox="0 0 700 560" aria-hidden="true">
-            <defs>
-              <linearGradient id="scRealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#dcecff"></stop>
-                <stop offset="100%" stop-color="#79aef9"></stop>
-              </linearGradient>
-              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="18" result="blur"></feGaussianBlur>
-                <feMerge>
-                  <feMergeNode in="blur"></feMergeNode>
-                  <feMergeNode in="SourceGraphic"></feMergeNode>
-                </feMerge>
-              </filter>
-            </defs>
-
-            <!-- cleaner South Carolina silhouette -->
-            <path
-              d="M183 165
-                 L209 142
-                 L255 126
-                 L313 122
-                 L372 142
-                 L425 145
-                 L480 174
-                 L533 214
-                 L585 225
-                 L610 261
-                 L595 292
-                 L618 339
-                 L585 374
-                 L531 381
-                 L503 416
-                 L435 427
-                 L388 450
-                 L336 439
-                 L276 414
-                 L235 378
-                 L196 328
-                 L165 286
-                 L139 240
-                 L135 198
-                 Z"
-              fill="url(#scRealGrad)"
-              stroke="#e2e8f0"
-              stroke-width="5"
-              filter="url(#glow)"
-              opacity="0.98"
-            ></path>
-
-            <!-- subtle internal highlight -->
-            <path
-              d="M210 164
-                 L257 146
-                 L306 144
-                 L366 164
-                 L418 168
-                 L470 196
-                 L522 235
-                 L567 244
-                 L587 270
-                 L574 292
-                 L592 331
-                 L567 358
-                 L519 365
-                 L493 394
-                 L432 404
-                 L392 425
-                 L346 415
-                 L292 393
-                 L254 361
-                 L218 316
-                 L189 276
-                 L166 236
-                 L163 201
-                 Z"
-              fill="rgba(255,255,255,0.08)"
-            ></path>
-
-            <!-- connector lines -->
-            <line x1="160" y1="150" x2="128" y2="111" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
-            <line x1="206" y1="128" x2="203" y2="83" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
-            <line x1="410" y1="248" x2="454" y2="235" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
-            <line x1="528" y1="313" x2="594" y2="304" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
-            <line x1="360" y1="356" x2="356" y2="430" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
-          </svg>
-
-          <!-- nodes -->
-          <div class="map-node" style="left:15%; top:20%;"></div>
-          <div class="map-node" style="left:27%; top:12%;"></div>
-          <div class="map-node" style="left:58%; top:40%;"></div>
-          <div class="map-node" style="left:82%; top:54%;"></div>
-          <div class="map-node" style="left:50%; top:63%;"></div>
-
-          <!-- labels -->
-          <div class="map-label" style="left:6%; top:17%;">
-            <h4>Greenville / Upstate</h4>
-            <p>Emerging AI and software activity tied to the Upstate tech base.</p>
-          </div>
-
-          <div class="map-label" style="left:16%; top:8%;">
-            <h4>Clemson</h4>
-            <p>Academic and research anchor for AI-adjacent talent and computing.</p>
-          </div>
-
-          <div class="map-label" style="left:43%; top:33%;">
-            <h4>Columbia / Midlands</h4>
-            <p>Policy, government, and university research center of gravity.</p>
-          </div>
-
-          <div class="map-label" style="left:63%; top:47%;">
-            <h4>Charleston</h4>
-            <p>Cybersecurity, startup, and digital-innovation hub.</p>
-          </div>
-
-          <div class="map-label" style="left:40%; top:71%;">
-            <h4>Statewide</h4>
-            <p>Programs and reports spanning the full state ecosystem.</p>
-          </div>
-        </div>
-
-        <div class="region-grid">
-          <div class="region-box">
-            <h4>Greenville / Upstate</h4>
-            <p>Emerging AI and software activity tied to the Upstate tech and startup base.</p>
-          </div>
-          <div class="region-box">
-            <h4>Clemson</h4>
-            <p>Academic and research anchor for AI-adjacent talent and computing capacity.</p>
-          </div>
-          <div class="region-box">
-            <h4>Columbia / Midlands</h4>
-            <p>Center of gravity for state government, policy, and major university research.</p>
-          </div>
-          <div class="region-box">
-            <h4>Charleston</h4>
-            <p>Cybersecurity, innovation, and digital-economy node with strong convening potential.</p>
-          </div>
-          <div class="region-box">
-            <h4>Statewide Programs</h4>
-            <p>Research and strategy efforts spanning institutions and communities across South Carolina.</p>
-          </div>
-        </div>
+  <!-- ══════════════════════════════════════════════
+       ECOSYSTEM MAP
+  ══════════════════════════════════════════════ -->
+  <section id="ecosystem" class="section" style="background:#edf4ff;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Ecosystem</div>
+        <h2 class="section-title">Interactive South Carolina AI ecosystem map</h2>
+        <p class="section-copy">
+          This can become one of SCAIO's signature public resources: a searchable, region-aware map
+          of the state's AI institutions, university programs, reports, public initiatives, and
+          ecosystem organizations.
+        </p>
       </div>
 
-      <div style="display:grid; gap:24px;">
-        <div class="side-panel">
-          <div class="panel-kicker">Seed dataset</div>
-          <div class="panel-title">Current entries</div>
-
-          <div class="entry-list">
-            <a class="entry-card" href="https://research.cec.sc.edu/aii/" target="_blank" rel="noreferrer">
-              <div class="chip-row">
-                <span class="chip">Columbia</span>
-                <span class="chip slate">University</span>
-              </div>
-              <h4>USC Artificial Intelligence Institute</h4>
-              <p>University-wide AI institute supporting interdisciplinary research, workforce development, and commercialization.</p>
-              <span class="resource-link">Open resource →</span>
-            </a>
-
-            <a class="entry-card" href="https://scepscor.org/adapt-in-sc-overview/" target="_blank" rel="noreferrer">
-              <div class="chip-row">
-                <span class="chip">Statewide</span>
-                <span class="chip slate">Research Program</span>
-              </div>
-              <h4>ADAPT in SC</h4>
-              <p>A statewide EPSCoR initiative building AI research capacity at the intersection of AI, life and social sciences, and bioengineering.</p>
-              <span class="resource-link">Open resource →</span>
-            </a>
-
-            <a class="entry-card" href="https://scra.org/scra-releases-report-on-ai-for-the-state-of-south-carolina/" target="_blank" rel="noreferrer">
-              <div class="chip-row">
-                <span class="chip">Statewide</span>
-                <span class="chip slate">Report</span>
-              </div>
-              <h4>SCRA AI Report for South Carolina</h4>
-              <p>A recent statewide AI report released by South Carolina Research Authority following its symposium process.</p>
-              <span class="resource-link">Open resource →</span>
-            </a>
-
-            <a class="entry-card" href="https://scra.org/ai/" target="_blank" rel="noreferrer">
-              <div class="chip-row">
-                <span class="chip">Statewide</span>
-                <span class="chip slate">Convening</span>
-              </div>
-              <h4>SCRA AI Leadership Hub</h4>
-              <p>The collaboration hub tied to South Carolina’s AI symposium and statewide convening efforts.</p>
-              <span class="resource-link">Open resource →</span>
-            </a>
-
-            <a class="entry-card" href="https://www.charlestondigital.com/" target="_blank" rel="noreferrer">
-              <div class="chip-row">
-                <span class="chip">Charleston</span>
-                <span class="chip slate">Ecosystem</span>
-              </div>
-              <h4>Charleston Digital Corridor</h4>
-              <p>A long-running Charleston innovation organization supporting startups, founders, and the regional tech ecosystem.</p>
-              <span class="resource-link">Open resource →</span>
-            </a>
-
-            <a class="entry-card" href="https://www.clemson.edu/cecas/departments/computing/" target="_blank" rel="noreferrer">
-              <div class="chip-row">
-                <span class="chip">Clemson</span>
-                <span class="chip slate">University</span>
-              </div>
-              <h4>Clemson School of Computing</h4>
-              <p>A major academic node for computing, data science, and adjacent AI research and talent development in the Upstate.</p>
-              <span class="resource-link">Open resource →</span>
-            </a>
+      <div class="map-layout">
+        <!-- ── Left: D3 map panel ── -->
+        <div class="map-panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Live geographic data</div>
+              <div class="panel-title">Regional map view</div>
+            </div>
+            <div class="badge">Census Bureau boundary</div>
           </div>
-        </div>
 
-        <div class="side-panel">
-          <div class="panel-kicker">Future filters</div>
-          <div class="panel-title">How this resource can grow</div>
+          <!-- D3 renders into this div -->
+          <div class="map-frame" id="sc-map-container"></div>
 
-          <div class="grow-grid">
-            <div class="grow-box">
-              <h4>Columbia</h4>
-              <div class="count">1 current item</div>
-              <ul>
-                <li>USC Artificial Intelligence Institute</li>
-              </ul>
+          <div class="region-grid" style="margin-top:20px;">
+            <div class="region-box">
+              <h4>Greenville / Upstate</h4>
+              <p>Emerging AI and software activity tied to the Upstate tech and startup base.</p>
             </div>
-
-            <div class="grow-box">
-              <h4>Statewide</h4>
-              <div class="count">3 current items</div>
-              <ul>
-                <li>ADAPT in SC</li>
-                <li>SCRA AI Leadership Hub</li>
-                <li>SCRA AI Report</li>
-              </ul>
+            <div class="region-box">
+              <h4>Clemson</h4>
+              <p>Academic and research anchor for AI-adjacent talent and computing capacity.</p>
             </div>
-
-            <div class="grow-box">
+            <div class="region-box">
+              <h4>Columbia / Midlands</h4>
+              <p>Center of gravity for state government, policy, and major university research.</p>
+            </div>
+            <div class="region-box">
               <h4>Charleston</h4>
-              <div class="count">1 current item</div>
-              <ul>
-                <li>Charleston Digital Corridor</li>
-              </ul>
+              <p>Cybersecurity, innovation, and digital-economy node with strong convening potential.</p>
             </div>
+            <div class="region-box">
+              <h4>Statewide Programs</h4>
+              <p>Research and strategy efforts spanning institutions and communities across South Carolina.</p>
+            </div>
+          </div>
+        </div>
 
-            <div class="grow-box">
-              <h4>Clemson / Upstate</h4>
-              <div class="count">1 current item</div>
-              <ul>
-                <li>Clemson School of Computing</li>
-              </ul>
+        <!-- ── Right: directory + growth panels ── -->
+        <div style="display:grid; gap:24px;">
+          <div class="side-panel">
+            <div class="panel-kicker">Seed dataset</div>
+            <div class="panel-title">Current entries</div>
+
+            <div class="entry-list">
+              <a class="entry-card" href="https://research.cec.sc.edu/aii/" target="_blank" rel="noreferrer">
+                <div class="chip-row"><span class="chip">Columbia</span><span class="chip slate">University</span></div>
+                <h4>USC Artificial Intelligence Institute</h4>
+                <p>University-wide AI institute supporting interdisciplinary research, workforce development, and commercialization.</p>
+                <span class="resource-link">Open resource →</span>
+              </a>
+              <a class="entry-card" href="https://scepscor.org/adapt-in-sc-overview/" target="_blank" rel="noreferrer">
+                <div class="chip-row"><span class="chip">Statewide</span><span class="chip slate">Research Program</span></div>
+                <h4>ADAPT in SC</h4>
+                <p>A statewide EPSCoR initiative building AI research capacity at the intersection of AI, life and social sciences, and bioengineering.</p>
+                <span class="resource-link">Open resource →</span>
+              </a>
+              <a class="entry-card" href="https://scra.org/scra-releases-report-on-ai-for-the-state-of-south-carolina/" target="_blank" rel="noreferrer">
+                <div class="chip-row"><span class="chip">Statewide</span><span class="chip slate">Report</span></div>
+                <h4>SCRA AI Report for South Carolina</h4>
+                <p>A recent statewide AI report released by South Carolina Research Authority following its symposium process.</p>
+                <span class="resource-link">Open resource →</span>
+              </a>
+              <a class="entry-card" href="https://scra.org/ai/" target="_blank" rel="noreferrer">
+                <div class="chip-row"><span class="chip">Statewide</span><span class="chip slate">Convening</span></div>
+                <h4>SCRA AI Leadership Hub</h4>
+                <p>The collaboration hub tied to South Carolina's AI symposium and statewide convening efforts.</p>
+                <span class="resource-link">Open resource →</span>
+              </a>
+              <a class="entry-card" href="https://www.charlestondigital.com/" target="_blank" rel="noreferrer">
+                <div class="chip-row"><span class="chip">Charleston</span><span class="chip slate">Ecosystem</span></div>
+                <h4>Charleston Digital Corridor</h4>
+                <p>A long-running Charleston innovation organization supporting startups, founders, and the regional tech ecosystem.</p>
+                <span class="resource-link">Open resource →</span>
+              </a>
+              <a class="entry-card" href="https://www.clemson.edu/cecas/departments/computing/" target="_blank" rel="noreferrer">
+                <div class="chip-row"><span class="chip">Clemson</span><span class="chip slate">University</span></div>
+                <h4>Clemson School of Computing</h4>
+                <p>A major academic node for computing, data science, and adjacent AI research and talent development in the Upstate.</p>
+                <span class="resource-link">Open resource →</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="side-panel">
+            <div class="panel-kicker">Future filters</div>
+            <div class="panel-title">How this resource can grow</div>
+            <div class="grow-grid">
+              <div class="grow-box">
+                <h4>Columbia</h4>
+                <div class="count">1 current item</div>
+                <ul><li>USC Artificial Intelligence Institute</li></ul>
+              </div>
+              <div class="grow-box">
+                <h4>Statewide</h4>
+                <div class="count">3 current items</div>
+                <ul>
+                  <li>ADAPT in SC</li>
+                  <li>SCRA AI Leadership Hub</li>
+                  <li>SCRA AI Report</li>
+                </ul>
+              </div>
+              <div class="grow-box">
+                <h4>Charleston</h4>
+                <div class="count">1 current item</div>
+                <ul><li>Charleston Digital Corridor</li></ul>
+              </div>
+              <div class="grow-box">
+                <h4>Clemson / Upstate</h4>
+                <div class="count">1 current item</div>
+                <ul><li>Clemson School of Computing</li></ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ══════════════════════════════════════════════
+       JOURNAL
+  ══════════════════════════════════════════════ -->
   <section id="journal" class="section">
     <div class="container">
       <div class="section-header">
         <div class="section-kicker">Journal</div>
         <h2 class="section-title">Possible early articles</h2>
       </div>
-
       <div class="article-grid">
         <article class="card">
           <div class="article-tag">Draft topic</div>
           <h3>Why South Carolina needs an AI observatory</h3>
           <p>Founding statement explaining the gap SCAIO exists to fill.</p>
         </article>
-
         <article class="card">
           <div class="article-tag">Draft topic</div>
           <h3>What AI means for South Carolina manufacturing</h3>
-          <p>An early sector analysis focused on the state’s industrial base.</p>
+          <p>An early sector analysis focused on the state's industrial base.</p>
         </article>
-
         <article class="card">
           <div class="article-tag">Draft topic</div>
           <h3>AI, cybersecurity, and public risk in the Palmetto State</h3>
           <p>A natural first collaboration connecting AI adoption with institutional risk.</p>
         </article>
-
         <article class="card">
           <div class="article-tag">Draft topic</div>
           <h3>How state governments are approaching AI governance</h3>
           <p>A practical explainer translating broader policy trends for South Carolina readers.</p>
         </article>
-
         <article class="card">
           <div class="article-tag">Draft topic</div>
           <h3>The emerging AI ecosystem in South Carolina</h3>
           <p>A mapping piece introducing the institutions, companies, and initiatives already in play.</p>
         </article>
-
         <article class="card">
           <div class="article-tag">Draft topic</div>
           <h3>A practical guide to AI adoption for South Carolina organizations</h3>
@@ -1599,6 +1173,9 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
   <footer id="contact" class="footer">
     <div class="container footer-inner">
       <div>
@@ -1610,7 +1187,6 @@
           down for launch or expanded into a full research site over time.
         </p>
       </div>
-
       <div class="footer-box">
         <div class="section-kicker" style="color:#b9d6ff; margin-bottom:6px;">Next build decisions</div>
         <ul>
@@ -1623,5 +1199,121 @@
       </div>
     </div>
   </footer>
+
+  <!-- ══════════════════════════════════════════════
+       D3 MAP — loads after DOM is ready
+  ══════════════════════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script>
+    (function () {
+      const W = 640, H = 420;
+
+      const cities = [
+        { name: 'Greenville / Upstate', sub: 'Startups, tech, industry', lon: -82.394, lat: 34.852, r: 9,  anchor: 'above' },
+        { name: 'Clemson',              sub: 'University research',       lon: -82.837, lat: 34.683, r: 6,  anchor: 'left'  },
+        { name: 'Columbia / Midlands',  sub: 'State govt, USC, policy',   lon: -81.035, lat: 34.001, r: 11, anchor: 'right' },
+        { name: 'Myrtle Beach',         sub: 'Coastal economy',           lon: -78.887, lat: 33.689, r: 7,  anchor: 'right' },
+        { name: 'Charleston',           sub: 'Startups, cyber',           lon: -79.931, lat: 32.777, r: 9,  anchor: 'right' },
+      ];
+
+      const container = document.getElementById('sc-map-container');
+
+      const svg = d3.select(container).append('svg')
+        .attr('width', '100%')
+        .attr('viewBox', `0 0 ${W} ${H}`)
+        .style('display', 'block');
+
+      svg.append('rect').attr('width', W).attr('height', H).attr('fill', '#071832');
+
+      fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json')
+        .then(r => r.json())
+        .then(us => {
+          const states = topojson.feature(us, us.objects.states);
+          const sc = { type: 'FeatureCollection', features: states.features.filter(d => d.id == 45) };
+
+          const proj = d3.geoAlbersUsa().fitExtent([[30, 24], [W - 110, H - 30]], sc);
+          const path = d3.geoPath().projection(proj);
+
+          // Glow filter
+          const defs = svg.append('defs');
+          const f = defs.append('filter').attr('id', 'sc-glow').attr('x', '-30%').attr('y', '-30%').attr('width', '160%').attr('height', '160%');
+          f.append('feGaussianBlur').attr('stdDeviation', '5').attr('result', 'blur');
+          const m = f.append('feMerge');
+          m.append('feMergeNode').attr('in', 'blur');
+          m.append('feMergeNode').attr('in', 'SourceGraphic');
+
+          // State fill
+          svg.append('path').datum(sc).attr('d', path)
+            .attr('fill', '#3a7ecf')
+            .attr('stroke', 'rgba(255,255,255,0.5)')
+            .attr('stroke-width', 1.5)
+            .attr('stroke-linejoin', 'round')
+            .attr('filter', 'url(#sc-glow)');
+
+          // Inner sheen
+          svg.append('path').datum(sc).attr('d', path)
+            .attr('fill', 'rgba(255,255,255,0.07)')
+            .attr('stroke', 'none');
+
+          // City markers + callout labels
+          cities.forEach(city => {
+            const pt = proj([city.lon, city.lat]);
+            if (!pt) return;
+            const [cx, cy] = pt;
+
+            const g = svg.append('g');
+            const PAD = 10;
+            const LW = city.name.length > 14 ? 166 : 140;
+            const LH = 40;
+            let tx, ty;
+
+            if (city.anchor === 'above') {
+              tx = cx - LW / 2; ty = cy - city.r - PAD - LH - 4;
+              g.append('line').attr('x1', cx).attr('y1', cy - city.r).attr('x2', cx).attr('y2', ty + LH)
+                .attr('stroke', 'rgba(255,255,255,0.38)').attr('stroke-width', 1.3).attr('stroke-dasharray', '4,3');
+            } else if (city.anchor === 'left') {
+              tx = cx - city.r - PAD - LW - 4; ty = cy - LH / 2;
+              g.append('line').attr('x1', cx - city.r).attr('y1', cy).attr('x2', tx + LW).attr('y2', cy)
+                .attr('stroke', 'rgba(255,255,255,0.38)').attr('stroke-width', 1.3).attr('stroke-dasharray', '4,3');
+            } else {
+              tx = cx + city.r + PAD + 4; ty = cy - LH / 2;
+              g.append('line').attr('x1', cx + city.r).attr('y1', cy).attr('x2', tx).attr('y2', cy)
+                .attr('stroke', 'rgba(255,255,255,0.38)').attr('stroke-width', 1.3).attr('stroke-dasharray', '4,3');
+            }
+
+            g.append('rect')
+              .attr('x', tx).attr('y', ty).attr('width', LW).attr('height', LH).attr('rx', 8)
+              .attr('fill', 'rgba(4,12,32,0.92)').attr('stroke', 'rgba(255,255,255,0.22)').attr('stroke-width', 1);
+
+            g.append('text')
+              .attr('x', tx + LW / 2).attr('y', ty + 13)
+              .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+              .attr('fill', 'white').attr('font-size', 12).attr('font-weight', 700)
+              .attr('font-family', 'Inter, sans-serif').text(city.name);
+
+            g.append('text')
+              .attr('x', tx + LW / 2).attr('y', ty + 29)
+              .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+              .attr('fill', 'rgba(175,210,255,0.88)').attr('font-size', 10)
+              .attr('font-family', 'Inter, sans-serif').text(city.sub);
+
+            // Dot
+            g.append('circle').attr('cx', cx).attr('cy', cy).attr('r', city.r)
+              .attr('fill', '#1d63db').attr('stroke', 'white').attr('stroke-width', 2.2);
+            g.append('circle').attr('cx', cx).attr('cy', cy).attr('r', city.r * 0.42)
+              .attr('fill', 'white');
+          });
+        })
+        .catch(() => {
+          svg.append('text')
+            .attr('x', W / 2).attr('y', H / 2)
+            .attr('text-anchor', 'middle').attr('fill', 'rgba(255,255,255,0.6)').attr('font-size', 13)
+            .attr('font-family', 'Inter, sans-serif')
+            .text('Map could not load — check network connection.');
+        });
+    })();
+  </script>
+
 </body>
 </html>

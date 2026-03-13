@@ -1,307 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SCAIO — South Carolina Artificial Intelligence Observatory</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:#f5f7fb;
-color:#1e293b;
-}
-
-header{
-background:#0b4ea2;
-color:white;
-padding:20px 40px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo img{
-height:60px;
-}
-
-.logo-title{
-font-weight:700;
-letter-spacing:1px;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:500;
-opacity:.9;
-}
-
-nav a:hover{
-opacity:1;
-}
-
-.hero{
-background:linear-gradient(135deg,#0b4ea2,#072d5f);
-color:white;
-padding:100px 40px;
-}
-
-.hero h1{
-font-size:48px;
-max-width:800px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-max-width:600px;
-opacity:.9;
-}
-
-.section{
-padding:80px 40px;
-max-width:1100px;
-margin:auto;
-}
-
-.section h2{
-font-size:32px;
-margin-bottom:20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.card h3{
-margin-top:0;
-}
-
-.dark{
-background:#0f172a;
-color:white;
-}
-
-.dark .card{
-background:#1e293b;
-color:white;
-}
-
-footer{
-background:#0f172a;
-color:white;
-padding:40px;
-text-align:center;
-margin-top:40px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCAIO | South Carolina AI Observatory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* DEEP NAVY THEME TO MATCH LOGO */
+        body { font-family: 'Inter', sans-serif; background-color: #080f1e; color: #f8fafc; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, #0f172a 0%, #080f1e 100%); }
+        .accent-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-glass { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.1); backdrop-filter: blur(10px); }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <nav class="sticky top-0 z-50 glass py-5 px-8 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter text-white">SC<span class="text-sky-400">AIO</span></div>
+        
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-slate-400">
+            <a href="#" class="hover:text-sky-400 transition">Research</a>
+            <a href="#" class="hover:text-sky-400 transition">Ecosystem Map</a>
+            <a href="#" class="hover:text-sky-400 transition">Policy Tracker</a>
+            <a href="#" class="hover:text-sky-400 transition">About</a>
+        </div>
+    </nav>
 
-<div class="logo">
-<img src="logo.png">
-<div class="logo-title">
-SCAIO<br>
-<span style="font-size:12px;font-weight:400;">South Carolina Artificial Intelligence Observatory</span>
-</div>
-</div>
+    <section class="hero-gradient min-h-[85vh] flex items-center pt-10 pb-20 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="flex flex-col items-start text-left">
+                <div class="mb-6 px-4 py-1 border border-sky-500/30 rounded-full bg-sky-500/10 text-sky-400 text-xs font-bold tracking-widest uppercase">
+                    Now Monitoring: 2026 Legislative Session
+                </div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+                    The Central Authority for AI in the <span class="accent-text">Palmetto State.</span>
+                </h1>
+                <p class="text-xl text-slate-400 max-w-xl mb-10 leading-relaxed">
+                    Bridging the gap between emerging technology and public interest through independent research, policy tracking, and technical audits.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <button class="bg-sky-500 hover:bg-sky-400 text-slate-950 px-8 py-4 rounded-lg font-bold transition shadow-lg shadow-sky-500/20">Download: 2026 Landscape Report</button>
+                    <button class="card-glass text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/5 transition">View Policy Tracker</button>
+                </div>
+            </div>
 
-<nav>
-<a href="#">About</a>
-<a href="#">Research</a>
-<a href="#">Policy</a>
-<a href="#">Ecosystem</a>
-<a href="#">Blog</a>
-<a href="#">Team</a>
-</nav>
+            <div class="flex justify-center md:justify-end items-center">
+                <img src="logo.jpg" alt="South Carolina AI Observatory Logo" class="w-full max-w-md lg:max-w-lg drop-shadow-[0_0_30px_rgba(56,189,248,0.15)]">
+            </div>
 
-</header>
+        </div>
+    </section>
 
-<section class="hero">
+    <section class="py-24 px-8 max-w-7xl mx-auto border-t border-slate-800">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Putting a Stake in the Ground.</h2>
+                <p class="text-slate-400 leading-relaxed mb-6 text-lg">
+                    The South Carolina AI Observatory (SCAIO) is an independent, non-partisan hub established to aggregate disparate resources and provide rigorous technical oversight. 
+                </p>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                    Our mission is to monitor the evolution of AI within South Carolina, providing data-driven clarity to navigate the complexities of ethics, security, and economic impact.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="card-glass p-6 rounded-xl">
+                    <div class="text-sky-400 font-bold text-2xl mb-2">01.</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-white">Monitor</div>
+                    <div class="text-xs text-slate-400 mt-2">Real-time legislative tracking and agency oversight.</div>
+                </div>
+                <div class="card-glass p-6 rounded-xl">
+                    <div class="text-sky-400 font-bold text-2xl mb-2">02.</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-white">Map</div>
+                    <div class="text-xs text-slate-400 mt-2">SC’s AI startup and data center backbone.</div>
+                </div>
+                <div class="card-glass p-6 rounded-xl col-span-2">
+                    <div class="text-sky-400 font-bold text-2xl mb-2">03.</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-white">Audit</div>
+                    <div class="text-xs text-slate-400 mt-2">Independent security, economic, and bias assessments.</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h1>Studying, tracking, and explaining the impact of artificial intelligence on South Carolina.</h1>
+    <section class="py-24 bg-[#0a1122] px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl font-bold mb-16 text-white underline decoration-sky-500 decoration-4 underline-offset-8">Founding Authority</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
+                    <h3 class="text-3xl font-bold mb-1 text-white">Jimmy Ardis</h3>
+                    <div class="text-sky-400 text-sm font-bold uppercase tracking-widest mb-6 border-b border-sky-500/20 pb-4">Executive Director</div>
+                    <div class="text-slate-300 text-sm leading-relaxed space-y-4 flex-grow">
+                        <p>
+                            Jimmy Ardis is a veteran policy analyst and community development expert who specializes in assessing the impact of emerging trends on vulnerable populations and municipal infrastructure.
+                        </p>
+                        <p>
+                            Beginning his career managing emergency response and crash-recovery equipment in the United States Air Force [cite: 562, 563], Ardis later served as a Policy Analyst for the Joseph P. Riley Jr. Center for Livable Communities[cite: 549, 550]. There, he developed resiliency frameworks and utilized economic, demographic, and GIS analysis to craft public policy directly adopted into the Charleston City Comprehensive Plan[cite: 553, 554, 596]. 
+                        </p>
+                        <p>
+                            As a Staff Writer for Ballotpedia, he published over 300 data-driven articles on local government and public policy[cite: 555, 559]. Ardis built and scaled the consultancy Civitas, directing community development and HUD compliance across nine states[cite: 529, 532, 546]. He is the founder of the AI automation agency Carolina Redesign and continues to advise state and local governments through The Commons Group[cite: 522, 526, 528].
+                        </p>
+                    </div>
+                </div>
 
-<p>
-The South Carolina Artificial Intelligence Observatory (SCAIO) is a public-interest research initiative focused on the economic, technological, and policy implications of AI across the Palmetto State.
-</p>
+                <div class="card-glass p-8 rounded-2xl flex flex-col h-full">
+                    <h3 class="text-3xl font-bold mb-1 text-white">Noah Schiffman</h3>
+                    <div class="text-sky-400 text-sm font-bold uppercase tracking-widest mb-6 border-b border-sky-500/20 pb-4">Chief Technical Advisor</div>
+                    <div class="text-slate-300 text-sm leading-relaxed space-y-4 flex-grow">
+                        <p>
+                            Noah Schiffman is a distinguished authority in IT security with over two decades of experience protecting corporate, defense, and intelligence assets from cyber-attacks[cite: 388, 390, 391]. 
+                        </p>
+                        <p>
+                            Holding a DoD Top Secret clearance, Schiffman recently served as the Chief Technology Advisor for KBR, a Fortune 500 global provider of science and engineering solutions[cite: 394, 395, 417]. Throughout his career, he has operated as a "white-hat" hacker and Chief Information Security Officer (CISO) for organizations like Wave Sciences and Orbis, Inc., managing advanced penetration testing, biometric security integration, and vulnerability analysis[cite: 396, 400, 429, 430].
+                        </p>
+                        <p>
+                            A true polymath, Schiffman holds an M.D. from the Medical University of South Carolina, degrees in Mechanical & Aerospace Engineering and Cognitive Psychology from Rutgers University, and multiple patents in acoustic and medical device technologies[cite: 392, 409, 413, 415, 492]. He is a regular speaker at national hacking and security conferences, including Defcon and BSides[cite: 471, 472].
+                        </p>
+                    </div>
+                </div>
 
-</section>
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-
-<h2>Why SCAIO Exists</h2>
-
-<p>
-Artificial intelligence is rapidly reshaping industries, institutions, and labor markets. Yet in South Carolina, information about AI activity remains fragmented across universities, businesses, and government initiatives.
-</p>
-
-<p>
-SCAIO aims to serve as a neutral observatory and research hub dedicated to understanding and documenting how AI is transforming the state’s economy, workforce, and public institutions.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>Core Functions</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Research & White Papers</h3>
-<p>State-specific studies examining the economic, workforce, and institutional impacts of artificial intelligence.</p>
-</div>
-
-<div class="card">
-<h3>Policy Tracking</h3>
-<p>Monitoring AI legislation, regulatory developments, and government initiatives affecting South Carolina.</p>
-</div>
-
-<div class="card">
-<h3>Ecosystem Mapping</h3>
-<p>A growing directory of AI companies, research labs, startups, and public initiatives operating across the state.</p>
-</div>
-
-<div class="card">
-<h3>Public Education</h3>
-<p>Clear explainers, commentary, and analysis helping policymakers, businesses, and citizens understand AI.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section dark">
-
-<h2>Initial Research Agenda</h2>
-
-<div class="grid">
-
-<div class="card">
-AI and South Carolina manufacturing
-</div>
-
-<div class="card">
-AI readiness by county and region
-</div>
-
-<div class="card">
-AI adoption among small businesses
-</div>
-
-<div class="card">
-Cybersecurity and AI risk
-</div>
-
-<div class="card">
-AI and workforce disruption
-</div>
-
-<div class="card">
-AI in state and local government
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Founding Team</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Jimmy</h3>
-
-<p>
-Founder & Executive Director
-</p>
-
-<p>
-Background spanning policy journalism, civic research, community development, and AI implementation through Carolina Redesign.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Noah Schiffman</h3>
-
-<p>
-Chief Technologist
-</p>
-
-<p>
-Veteran cybersecurity leader with over two decades of experience in security research, risk management, and emerging technology strategy.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Upcoming Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>AI Landscape of South Carolina</h3>
-<p>Flagship report mapping the state’s AI ecosystem, major institutions, and economic implications.</p>
-</div>
-
-<div class="card">
-<h3>South Carolina AI Ecosystem Map</h3>
-<p>A public directory of companies, research labs, government initiatives, and community resources.</p>
-</div>
-
-<div class="card">
-<h3>AI Policy Tracker</h3>
-<p>A running timeline of legislation, policy changes, and public sector AI initiatives.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>South Carolina Artificial Intelligence Observatory (SCAIO)</p>
-
-<p>Researching the future of artificial intelligence in the Palmetto State</p>
-
-</footer>
+    <footer class="py-12 bg-[#060a14] border-t border-slate-900 text-center px-8">
+        <div class="text-slate-500 text-sm">
+            © 2026 South Carolina AI Observatory. <br>
+            <span class="text-slate-600 mt-2 block italic">An independent initiative supported by the technical resources of Carolina Redesign.</span>
+        </div>
+    </footer>
 
 </body>
 </html>

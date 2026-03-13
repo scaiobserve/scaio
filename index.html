@@ -1272,222 +1272,285 @@
     </div>
   </section>
 
-  <section id="ecosystem" class="section" style="background:#edf4ff;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-kicker">Ecosystem</div>
-        <h2 class="section-title">Interactive South Carolina AI ecosystem map</h2>
-        <p class="section-copy">
-          This can become one of SCAIO’s signature public resources: a searchable, region-aware map
-          of the state’s AI institutions, university programs, reports, public initiatives, and
-          ecosystem organizations.
-        </p>
-      </div>
+ <section id="ecosystem" class="section" style="background:#edf4ff;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-kicker">Ecosystem</div>
+      <h2 class="section-title">Interactive South Carolina AI ecosystem map</h2>
+      <p class="section-copy">
+        This can become one of SCAIO’s signature public resources: a searchable, region-aware map
+        of the state’s AI institutions, university programs, reports, public initiatives, and
+        ecosystem organizations.
+      </p>
+    </div>
 
-      <div class="map-layout">
-        <div class="map-panel">
-          <div class="panel-head">
-            <div>
-              <div class="panel-kicker">Prototype</div>
-              <div class="panel-title">Regional map view</div>
-            </div>
-            <div class="badge">Clickable concept</div>
+    <div class="map-layout">
+      <div class="map-panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Prototype</div>
+            <div class="panel-title">Regional map view</div>
+          </div>
+          <div class="badge">Improved outline</div>
+        </div>
+
+        <div class="map-frame">
+          <svg viewBox="0 0 700 560" aria-hidden="true">
+            <defs>
+              <linearGradient id="scRealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#dcecff"></stop>
+                <stop offset="100%" stop-color="#79aef9"></stop>
+              </linearGradient>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="18" result="blur"></feGaussianBlur>
+                <feMerge>
+                  <feMergeNode in="blur"></feMergeNode>
+                  <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- cleaner South Carolina silhouette -->
+            <path
+              d="M183 165
+                 L209 142
+                 L255 126
+                 L313 122
+                 L372 142
+                 L425 145
+                 L480 174
+                 L533 214
+                 L585 225
+                 L610 261
+                 L595 292
+                 L618 339
+                 L585 374
+                 L531 381
+                 L503 416
+                 L435 427
+                 L388 450
+                 L336 439
+                 L276 414
+                 L235 378
+                 L196 328
+                 L165 286
+                 L139 240
+                 L135 198
+                 Z"
+              fill="url(#scRealGrad)"
+              stroke="#e2e8f0"
+              stroke-width="5"
+              filter="url(#glow)"
+              opacity="0.98"
+            ></path>
+
+            <!-- subtle internal highlight -->
+            <path
+              d="M210 164
+                 L257 146
+                 L306 144
+                 L366 164
+                 L418 168
+                 L470 196
+                 L522 235
+                 L567 244
+                 L587 270
+                 L574 292
+                 L592 331
+                 L567 358
+                 L519 365
+                 L493 394
+                 L432 404
+                 L392 425
+                 L346 415
+                 L292 393
+                 L254 361
+                 L218 316
+                 L189 276
+                 L166 236
+                 L163 201
+                 Z"
+              fill="rgba(255,255,255,0.08)"
+            ></path>
+
+            <!-- connector lines -->
+            <line x1="160" y1="150" x2="128" y2="111" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
+            <line x1="206" y1="128" x2="203" y2="83" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
+            <line x1="410" y1="248" x2="454" y2="235" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
+            <line x1="528" y1="313" x2="594" y2="304" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
+            <line x1="360" y1="356" x2="356" y2="430" stroke="rgba(255,255,255,0.4)" stroke-width="2"></line>
+          </svg>
+
+          <!-- nodes -->
+          <div class="map-node" style="left:15%; top:20%;"></div>
+          <div class="map-node" style="left:27%; top:12%;"></div>
+          <div class="map-node" style="left:58%; top:40%;"></div>
+          <div class="map-node" style="left:82%; top:54%;"></div>
+          <div class="map-node" style="left:50%; top:63%;"></div>
+
+          <!-- labels -->
+          <div class="map-label" style="left:6%; top:17%;">
+            <h4>Greenville / Upstate</h4>
+            <p>Emerging AI and software activity tied to the Upstate tech base.</p>
           </div>
 
-          <div class="map-frame">
-            <svg viewBox="0 0 620 430" aria-hidden="true">
-              <defs>
-                <linearGradient id="scGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-                  <stop offset="0%" stop-color="#dbeafe"></stop>
-                  <stop offset="100%" stop-color="#60a5fa"></stop>
-                </linearGradient>
-              </defs>
-              <path
-                d="M113 112 L152 96 L190 86 L232 88 L287 109 L348 109 L399 138 L444 173 L472 178 L505 214 L483 245 L507 283 L484 304 L456 307 L442 333 L401 343 L361 329 L328 337 L282 331 L245 318 L214 306 L188 275 L168 244 L145 210 L126 180 L113 154 Z"
-                fill="url(#scGrad)"
-                stroke="#e2e8f0"
-                stroke-width="4"
-                opacity="0.97"
-              ></path>
-            </svg>
-
-            <button class="map-node" style="left:22%; top:24%;">
-              <span class="map-node-dot"><span></span></span>
-              <span class="map-node-label">
-                <strong>Greenville / Upstate</strong>
-                Emerging AI and software activity tied to the Upstate tech base.
-              </span>
-            </button>
-
-            <button class="map-node" style="left:28%; top:20%;">
-              <span class="map-node-dot"><span></span></span>
-              <span class="map-node-label">
-                <strong>Clemson</strong>
-                Academic and research anchor for AI-adjacent talent and computing.
-              </span>
-            </button>
-
-            <button class="map-node" style="left:47%; top:44%;">
-              <span class="map-node-dot"><span></span></span>
-              <span class="map-node-label">
-                <strong>Columbia / Midlands</strong>
-                Policy, government, and university research center of gravity.
-              </span>
-            </button>
-
-            <button class="map-node" style="left:78%; top:50%;">
-              <span class="map-node-dot"><span></span></span>
-              <span class="map-node-label">
-                <strong>Charleston</strong>
-                Cybersecurity, startup, and digital-innovation hub.
-              </span>
-            </button>
-
-            <button class="map-node" style="left:58%; top:72%;">
-              <span class="map-node-dot"><span></span></span>
-              <span class="map-node-label">
-                <strong>Statewide</strong>
-                Programs and reports spanning the full state ecosystem.
-              </span>
-            </button>
+          <div class="map-label" style="left:16%; top:8%;">
+            <h4>Clemson</h4>
+            <p>Academic and research anchor for AI-adjacent talent and computing.</p>
           </div>
 
-          <div class="region-grid">
-            <div class="region-box">
-              <h4>Greenville / Upstate</h4>
-              <p>Emerging AI and software activity tied to the Upstate tech and startup base.</p>
-            </div>
-            <div class="region-box">
-              <h4>Clemson</h4>
-              <p>Academic and research anchor for AI-adjacent talent and computing capacity.</p>
-            </div>
-            <div class="region-box">
-              <h4>Columbia / Midlands</h4>
-              <p>Center of gravity for state government, policy, and major university research.</p>
-            </div>
-            <div class="region-box">
-              <h4>Charleston</h4>
-              <p>Cybersecurity, innovation, and digital-economy node with strong convening potential.</p>
-            </div>
-            <div class="region-box">
-              <h4>Statewide Programs</h4>
-              <p>Research and strategy efforts spanning institutions and communities across South Carolina.</p>
-            </div>
+          <div class="map-label" style="left:43%; top:33%;">
+            <h4>Columbia / Midlands</h4>
+            <p>Policy, government, and university research center of gravity.</p>
+          </div>
+
+          <div class="map-label" style="left:63%; top:47%;">
+            <h4>Charleston</h4>
+            <p>Cybersecurity, startup, and digital-innovation hub.</p>
+          </div>
+
+          <div class="map-label" style="left:40%; top:71%;">
+            <h4>Statewide</h4>
+            <p>Programs and reports spanning the full state ecosystem.</p>
           </div>
         </div>
 
-        <div style="display:grid; gap:24px;">
-          <div class="side-panel">
-            <div class="panel-kicker">Seed dataset</div>
-            <div class="panel-title">Current entries</div>
-
-            <div class="entry-list">
-              <a class="entry-card" href="https://research.cec.sc.edu/aii/" target="_blank" rel="noreferrer">
-                <div class="chip-row">
-                  <span class="chip">Columbia</span>
-                  <span class="chip slate">University</span>
-                </div>
-                <h4>USC Artificial Intelligence Institute</h4>
-                <p>University-wide AI institute supporting interdisciplinary research, workforce development, and commercialization.</p>
-                <span class="resource-link">Open resource →</span>
-              </a>
-
-              <a class="entry-card" href="https://scepscor.org/adapt-in-sc-overview/" target="_blank" rel="noreferrer">
-                <div class="chip-row">
-                  <span class="chip">Statewide</span>
-                  <span class="chip slate">Research Program</span>
-                </div>
-                <h4>ADAPT in SC</h4>
-                <p>A statewide EPSCoR initiative building AI research capacity at the intersection of AI, life and social sciences, and bioengineering.</p>
-                <span class="resource-link">Open resource →</span>
-              </a>
-
-              <a class="entry-card" href="https://scra.org/scra-releases-report-on-ai-for-the-state-of-south-carolina/" target="_blank" rel="noreferrer">
-                <div class="chip-row">
-                  <span class="chip">Statewide</span>
-                  <span class="chip slate">Report</span>
-                </div>
-                <h4>SCRA AI Report for South Carolina</h4>
-                <p>A recent statewide AI report released by South Carolina Research Authority following its symposium process.</p>
-                <span class="resource-link">Open resource →</span>
-              </a>
-
-              <a class="entry-card" href="https://scra.org/ai/" target="_blank" rel="noreferrer">
-                <div class="chip-row">
-                  <span class="chip">Statewide</span>
-                  <span class="chip slate">Convening</span>
-                </div>
-                <h4>SCRA AI Leadership Hub</h4>
-                <p>The collaboration hub tied to South Carolina’s AI symposium and statewide convening efforts.</p>
-                <span class="resource-link">Open resource →</span>
-              </a>
-
-              <a class="entry-card" href="https://www.charlestondigital.com/" target="_blank" rel="noreferrer">
-                <div class="chip-row">
-                  <span class="chip">Charleston</span>
-                  <span class="chip slate">Ecosystem</span>
-                </div>
-                <h4>Charleston Digital Corridor</h4>
-                <p>A long-running Charleston innovation organization supporting startups, founders, and the regional tech ecosystem.</p>
-                <span class="resource-link">Open resource →</span>
-              </a>
-
-              <a class="entry-card" href="https://www.clemson.edu/cecas/departments/computing/" target="_blank" rel="noreferrer">
-                <div class="chip-row">
-                  <span class="chip">Clemson</span>
-                  <span class="chip slate">University</span>
-                </div>
-                <h4>Clemson School of Computing</h4>
-                <p>A major academic node for computing, data science, and adjacent AI research and talent development in the Upstate.</p>
-                <span class="resource-link">Open resource →</span>
-              </a>
-            </div>
+        <div class="region-grid">
+          <div class="region-box">
+            <h4>Greenville / Upstate</h4>
+            <p>Emerging AI and software activity tied to the Upstate tech and startup base.</p>
           </div>
+          <div class="region-box">
+            <h4>Clemson</h4>
+            <p>Academic and research anchor for AI-adjacent talent and computing capacity.</p>
+          </div>
+          <div class="region-box">
+            <h4>Columbia / Midlands</h4>
+            <p>Center of gravity for state government, policy, and major university research.</p>
+          </div>
+          <div class="region-box">
+            <h4>Charleston</h4>
+            <p>Cybersecurity, innovation, and digital-economy node with strong convening potential.</p>
+          </div>
+          <div class="region-box">
+            <h4>Statewide Programs</h4>
+            <p>Research and strategy efforts spanning institutions and communities across South Carolina.</p>
+          </div>
+        </div>
+      </div>
 
-          <div class="side-panel">
-            <div class="panel-kicker">Future filters</div>
-            <div class="panel-title">How this resource can grow</div>
+      <div style="display:grid; gap:24px;">
+        <div class="side-panel">
+          <div class="panel-kicker">Seed dataset</div>
+          <div class="panel-title">Current entries</div>
 
-            <div class="grow-grid">
-              <div class="grow-box">
-                <h4>Columbia</h4>
-                <div class="count">1 current item</div>
-                <ul>
-                  <li>USC Artificial Intelligence Institute</li>
-                </ul>
+          <div class="entry-list">
+            <a class="entry-card" href="https://research.cec.sc.edu/aii/" target="_blank" rel="noreferrer">
+              <div class="chip-row">
+                <span class="chip">Columbia</span>
+                <span class="chip slate">University</span>
               </div>
+              <h4>USC Artificial Intelligence Institute</h4>
+              <p>University-wide AI institute supporting interdisciplinary research, workforce development, and commercialization.</p>
+              <span class="resource-link">Open resource →</span>
+            </a>
 
-              <div class="grow-box">
-                <h4>Statewide</h4>
-                <div class="count">3 current items</div>
-                <ul>
-                  <li>ADAPT in SC</li>
-                  <li>SCRA AI Leadership Hub</li>
-                  <li>SCRA AI Report</li>
-                </ul>
+            <a class="entry-card" href="https://scepscor.org/adapt-in-sc-overview/" target="_blank" rel="noreferrer">
+              <div class="chip-row">
+                <span class="chip">Statewide</span>
+                <span class="chip slate">Research Program</span>
               </div>
+              <h4>ADAPT in SC</h4>
+              <p>A statewide EPSCoR initiative building AI research capacity at the intersection of AI, life and social sciences, and bioengineering.</p>
+              <span class="resource-link">Open resource →</span>
+            </a>
 
-              <div class="grow-box">
-                <h4>Charleston</h4>
-                <div class="count">1 current item</div>
-                <ul>
-                  <li>Charleston Digital Corridor</li>
-                </ul>
+            <a class="entry-card" href="https://scra.org/scra-releases-report-on-ai-for-the-state-of-south-carolina/" target="_blank" rel="noreferrer">
+              <div class="chip-row">
+                <span class="chip">Statewide</span>
+                <span class="chip slate">Report</span>
               </div>
+              <h4>SCRA AI Report for South Carolina</h4>
+              <p>A recent statewide AI report released by South Carolina Research Authority following its symposium process.</p>
+              <span class="resource-link">Open resource →</span>
+            </a>
 
-              <div class="grow-box">
-                <h4>Clemson / Upstate</h4>
-                <div class="count">1 current item</div>
-                <ul>
-                  <li>Clemson School of Computing</li>
-                </ul>
+            <a class="entry-card" href="https://scra.org/ai/" target="_blank" rel="noreferrer">
+              <div class="chip-row">
+                <span class="chip">Statewide</span>
+                <span class="chip slate">Convening</span>
               </div>
+              <h4>SCRA AI Leadership Hub</h4>
+              <p>The collaboration hub tied to South Carolina’s AI symposium and statewide convening efforts.</p>
+              <span class="resource-link">Open resource →</span>
+            </a>
+
+            <a class="entry-card" href="https://www.charlestondigital.com/" target="_blank" rel="noreferrer">
+              <div class="chip-row">
+                <span class="chip">Charleston</span>
+                <span class="chip slate">Ecosystem</span>
+              </div>
+              <h4>Charleston Digital Corridor</h4>
+              <p>A long-running Charleston innovation organization supporting startups, founders, and the regional tech ecosystem.</p>
+              <span class="resource-link">Open resource →</span>
+            </a>
+
+            <a class="entry-card" href="https://www.clemson.edu/cecas/departments/computing/" target="_blank" rel="noreferrer">
+              <div class="chip-row">
+                <span class="chip">Clemson</span>
+                <span class="chip slate">University</span>
+              </div>
+              <h4>Clemson School of Computing</h4>
+              <p>A major academic node for computing, data science, and adjacent AI research and talent development in the Upstate.</p>
+              <span class="resource-link">Open resource →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="side-panel">
+          <div class="panel-kicker">Future filters</div>
+          <div class="panel-title">How this resource can grow</div>
+
+          <div class="grow-grid">
+            <div class="grow-box">
+              <h4>Columbia</h4>
+              <div class="count">1 current item</div>
+              <ul>
+                <li>USC Artificial Intelligence Institute</li>
+              </ul>
+            </div>
+
+            <div class="grow-box">
+              <h4>Statewide</h4>
+              <div class="count">3 current items</div>
+              <ul>
+                <li>ADAPT in SC</li>
+                <li>SCRA AI Leadership Hub</li>
+                <li>SCRA AI Report</li>
+              </ul>
+            </div>
+
+            <div class="grow-box">
+              <h4>Charleston</h4>
+              <div class="count">1 current item</div>
+              <ul>
+                <li>Charleston Digital Corridor</li>
+              </ul>
+            </div>
+
+            <div class="grow-box">
+              <h4>Clemson / Upstate</h4>
+              <div class="count">1 current item</div>
+              <ul>
+                <li>Clemson School of Computing</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="journal" class="section">
     <div class="container">

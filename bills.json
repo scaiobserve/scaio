@@ -1,0 +1,74 @@
+[
+  {
+    "id": "9999001",
+    "bill_number": "H5253",
+    "state": "SC",
+    "date_processed": "2026-03-13",
+    "status": "Introduced in House",
+    "impact_score": "6",
+    "title": "A BILL REGARDING AI IN EDUCATION, REQUIRING PARENTAL CONSENT AND TEACHER OVERSIGHT",
+    "summary": "- The bill mandates parental consent for the use of AI tools in educational settings.\n- It requires teacher oversight when AI is implemented in classrooms.\n- The bill aims to regulate the integration of AI technologies in education to ensure student safety and privacy.",
+    "explanation": "This bill would likely have a moderate impact on local governments and educational institutions in South Carolina by necessitating the development of new protocols and oversight mechanisms for AI use in schools. Manufacturers of educational AI tools may experience increased compliance costs to meet the new requirements. The regional tech economy could see a boost in demand for AI solutions tailored to educational settings, but the need for parental consent and teacher oversight might slow down the adoption process.",
+    "url": "https://legiscan.com/SC/text/H5253/id/9999001"
+  },
+  {
+    "id": "9999002",
+    "bill_number": "S0963",
+    "state": "SC",
+    "date_processed": "2026-03-13",
+    "status": "Introduced in Senate",
+    "impact_score": "7",
+    "title": "A BILL TO INTRODUCE REGULATIONS FOR HIGH-RISK AI SYSTEMS",
+    "summary": "- The bill seeks to introduce regulations specifically targeting high-risk AI systems.\n- It aims to establish guidelines and oversight mechanisms to ensure the safe deployment and use of AI technologies.\n- The legislation is currently in the introductory phase in the Senate, indicating it is in the early stages of the legislative process.",
+    "explanation": "The introduction of regulations for high-risk AI systems in South Carolina could significantly impact local governments by necessitating the development of compliance frameworks and oversight bodies, potentially increasing administrative costs. For manufacturers, particularly those incorporating AI into their operations, this bill could lead to increased compliance costs and necessitate adjustments in their AI deployment strategies. However, by setting clear standards, the bill could also foster a more secure and trustworthy regional tech economy, potentially attracting businesses that prioritize ethical AI practices.",
+    "url": "https://legiscan.com/SC/text/S0963/id/9999002"
+  },
+  {
+    "id": "9999003",
+    "bill_number": "H0784",
+    "state": "SC",
+    "date_processed": "2026-03-13",
+    "status": "Passed House",
+    "impact_score": "7",
+    "title": "A BILL TO REGULATE ENERGY AND WATER USAGE OF DATA CENTERS",
+    "summary": "- The bill aims to regulate energy and water usage specifically for data centers in South Carolina.\n- It has successfully passed the House, indicating a level of legislative support and momentum.\n- The regulation could impact operational costs and environmental practices of data centers in the state.",
+    "explanation": "This bill would likely have a significant impact on local governments and the regional tech economy by setting new standards for energy and water consumption in data centers, potentially increasing operational costs for manufacturers. While it could encourage the adoption of more sustainable practices, it may also require data centers to invest in new technologies or infrastructure to comply with the regulations. This could lead to a shift in how data centers operate within South Carolina, potentially influencing their economic contributions and environmental footprint.",
+    "url": "https://legiscan.com/SC/text/H0784/id/9999003"
+  },
+  {
+    "id": "9999004",
+    "bill_number": "S0443",
+    "state": "SC",
+    "date_processed": "2026-03-13",
+    "status": "In Committee",
+    "impact_score": "6",
+    "title": "A BILL REGARDING HEALTHCARE COVERAGE DECISIONS MADE USING AI",
+    "summary": "- The bill addresses the use of artificial intelligence in making healthcare coverage decisions.\n- It is currently under committee review, indicating it is in the early stages of the legislative process.\n- The sponsor of the bill is not identified, which may affect its visibility and support within the legislature.",
+    "explanation": "This bill could have a moderate impact on South Carolina's local governments and healthcare providers by potentially streamlining decision-making processes and reducing administrative costs. However, it may also raise concerns about the transparency and fairness of AI-driven decisions, necessitating oversight mechanisms. The regional tech economy might benefit from increased demand for AI solutions, but this would require careful implementation to ensure ethical standards are maintained.",
+    "url": "https://legiscan.com/SC/text/S0443/id/9999004"
+  },
+  {
+    "id": "9999005",
+    "bill_number": "H4657",
+    "state": "SC",
+    "date_processed": "2026-03-13",
+    "status": "Read second time",
+    "impact_score": "6",
+    "title": "THE 'RIGHT TO COMPUTE' ACT",
+    "summary": "- The 'Right to Compute' Act aims to ensure individuals' rights to access and use computing resources without undue restrictions.\n- The legislation could potentially enhance digital literacy and access to technology across South Carolina.\n- The bill's progression to a second reading indicates legislative interest and potential for further debate and refinement.",
+    "explanation": "The 'Right to Compute' Act could have a moderate impact on South Carolina's regional tech economy by promoting greater access to computing resources, which may lead to increased innovation and tech literacy. Local governments might need to allocate resources to support infrastructure and educational programs to facilitate this access. Manufacturers of computing devices could see a rise in demand, potentially boosting local production and sales.",
+    "url": "https://legiscan.com/SC/text/H4657/id/9999005"
+  },
+  {
+    "id": "9999006",
+    "bill_number": "S5085",
+    "state": "SC",
+    "date_processed": "2026-03-13",
+    "status": "Adopted",
+    "impact_score": "6",
+    "title": "A RESOLUTION TO DECLARE 'AI WEEK'",
+    "summary": "- The resolution declares a specific week as 'AI Week' in South Carolina.\n- It aims to raise awareness and promote the understanding of artificial intelligence technologies.\n- The initiative could foster collaboration among tech companies, educational institutions, and local governments.",
+    "explanation": "This resolution could positively impact South Carolina's regional tech economy by highlighting the importance of AI technologies and encouraging innovation. It may lead to increased interest and investment in AI from local manufacturers and tech companies, potentially boosting economic growth. However, as a resolution, its direct impact on policy or funding is limited, which may restrict its immediate influence on local governments.",
+    "url": "https://legiscan.com/SC/text/S5085/id/9999006"
+  }
+]

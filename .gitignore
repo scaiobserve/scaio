@@ -1,0 +1,10 @@
+# Environments
+.env
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Local databases
+*.sqlite3
+processed_bills.json

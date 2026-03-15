@@ -221,6 +221,31 @@
     .two-col { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: start; }
     .stack { display: grid; gap: 18px; }
 
+    .about-challenge {
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 16px 16px 0;
+    }
+
+    .about-challenge-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .about-challenge p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.85;
+    }
+
     /* ── Cards ── */
     .card-grid { display: grid; gap: 22px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
@@ -620,10 +645,11 @@
         <div class="eyebrow">A public-interest research initiative for the Palmetto State</div>
         <h1>Studying, tracking, and explaining the impact of AI on South Carolina.</h1>
         <p>
-          The South Carolina Artificial Intelligence Observatory is being built as a central
-          hub for research, policy tracking, ecosystem mapping, and public education on how
-          artificial intelligence is reshaping South Carolina's economy, workforce, institutions,
-          and communities.
+          The rapid expansion of artificial intelligence is no longer a distant headline — it is
+          happening right here in the Palmetto State. From multibillion-dollar investments in local
+          data centers to the state's initial AI strategies, the momentum is undeniable. SCAIO exists
+          to close the information gap between where the technology is and where our policy, institutions,
+          and communities need to be.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#research">Explore the research agenda</a>
@@ -642,24 +668,41 @@
        ABOUT
   ══════════════════════════════════════════════ -->
   <section id="about" class="section">
-    <div class="container two-col">
-      <div>
-        <div class="section-kicker">About</div>
-        <h2 class="section-title">Why SCAIO exists</h2>
-      </div>
-      <div class="stack">
-        <p class="section-copy">
-          South Carolina has emerging AI activity across universities, startups, public institutions,
-          workforce programs, and private industry, but much of it remains fragmented, siloed, and
-          difficult to track. SCAIO is intended to serve as a neutral observatory and public-facing
-          research center focused on how artificial intelligence is reshaping the state.
-        </p>
-        <p class="section-copy">
-          The site is designed to grow into a practical, credible hub: part think tank, part policy
-          tracker, part research library, and part statewide directory. In its earliest phase, SCAIO
-          will prioritize high-value foundational resources that make the landscape legible for
-          policymakers, journalists, businesses, educators, and citizens.
-        </p>
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">Why SCAIO exists</h2>
+          <div class="about-challenge">
+            <div class="about-challenge-label">The Challenge</div>
+            <p>
+              South Carolina's AI ecosystem is scattered across university labs, state agencies, and
+              corporate boardrooms. There is no central stake in the ground to aggregate these disparate
+              policies, programs, and reports. While the state is moving forward with early initiatives,
+              the lack of a unified hub makes it difficult to see the full picture.
+            </p>
+          </div>
+        </div>
+        <div class="stack">
+          <p class="section-copy">
+            Effective AI policy cannot be written in a vacuum, and secure AI systems cannot be built
+            without understanding their impact on the community. SCAIO exists at the intersection of
+            public policy and hard technology — pairing a deep, localized understanding of South
+            Carolina's municipal infrastructure and community development with elite-level cybersecurity
+            expertise. Backed by a history of protecting national-level assets, securing DoD
+            communications, and publishing structured policy data, our leadership team provides the
+            technical reality-check that modern state policy desperately needs.
+          </p>
+          <p class="section-copy">
+            Our goal is to serve as South Carolina's definitive information hub and central resource
+            for artificial intelligence. For the Palmetto State to lead in the AI era, we must have a
+            clear, objective view of the landscape. SCAIO is here to help citizens, lawmakers, and
+            business leaders assess the risks, plan for workforce disruptions, mitigate systemic
+            vulnerabilities, and leverage the profound economic opportunities of this technology —
+            providing the clarity necessary to ensure that as we redesign our state's future, we are
+            moving forward with the best information available.
+          </p>
+        </div>
       </div>
     </div>
   </section>
